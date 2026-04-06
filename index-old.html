@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta property="og:title" content="Jennifer Simonds – UX, AI & Trust Design" />
+<meta property="og:description" content="Designing trustworthy AI systems and public digital services." />
+<meta property="og:image" content="jennifer_2_2x.png" />
+<meta property="og:url" content="https://www.jennifersimonds.com/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="favron 32.png" sizes="32x32" href="/favron 32">
+<link rel="icon" type="favron16.png" sizes="16x16" href="/favron16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennifer Simonds-Spellmann — Product Design Innovation</title>
+<meta name="description" content="Senior Product Designer in Berlin specialising in AI product design, end-to-end product design leadership, innovation facilitation and design systems. 10+ years across government digital services, health tech and regulated technology.">
+<meta name="keywords" content="product design, UX design, AI design, design systems, Berlin, BITV, accessibility, innovation facilitation">
+<meta property="og:title" content="Jennifer Simonds-Spellmann — Product Design Innovation">
+<meta property="og:description" content="Senior Product Designer in Berlin. AI product design, design leadership, innovation facilitation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jennifersimonds.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jennifer Simonds-Spellmann — Product Design Innovation">
+<meta name="twitter:description" content="Senior Product Designer in Berlin. AI product design, design leadership, innovation facilitation.">
+<link rel="canonical" href="https://jennifersimonds.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --yellow: #FFD93D;
+  --yellow-deep: #F5C800;
+  --pink: #FF3DA0;
+  --pink-dark: #CC1F7A;
+  --cyan: #00C4D4;
+  --ink: #111111;
+  --white: #FFFFFF;
+  --off-white: #FAFAF7;
+  --stripe-color: rgba(0,0,0,0.055);
+  --bebas: 'Bebas Neue', Impact, sans-serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --mono: 'Space Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── STRIPE TEXTURE ── */
+.stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--stripe-color) 0px,
+    var(--stripe-color) 2px,
+    transparent 2px,
+    transparent 12px
+  );
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 60px;
+}
+
+.nav-logo {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  color: var(--yellow);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0 1.25rem;
+  height: 60px;
+  line-height: 60px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.80);
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+  border-left: 0.5px solid rgba(255,255,255,0.08);
+}
+
+.nav-links a:hover {
+  color: var(--yellow);
+  background: rgba(255,255,255,0.04);
+}
+
+/* ── HERO ── */
+.hero {
+  padding: 4rem 2.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: end;
+  padding-bottom: 3rem;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--ink);
+  color: var(--yellow);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: clamp(5rem, 13vw, 11rem);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.hero-headline .hl-pink { color: var(--pink); }
+.hero-headline .hl-white {
+  color: var(--white);
+  -webkit-text-stroke: 2px var(--ink);
+}
+
+.hero-desc {
+  margin-top: 2rem;
+  max-width: 38rem;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: rgba(17,17,17,0.85);
+}
+
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.hero-stat-val {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-align: right;
+}
+
+.hero-stat-label {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.80);
+  text-align: right;
+  margin-top: 0.2rem;
+}
+
+/* CTA row */
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2.5rem 2.5rem;
+  background: var(--pink);
+  margin: 0 -2.5rem -0px;
+  border-top: 3px solid var(--ink);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-cta-text {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: none;
+}
+
+.cta-btn-primary {
+  background: var(--ink);
+  color: var(--yellow);
+}
+
+.cta-btn-primary:hover { background: #333; }
+
+.cta-btn-ghost {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.cta-btn-ghost:hover { background: rgba(255,255,255,0.1); }
+
+/* ── FOCUS GRID ── */
+.focus-section {
+  background: var(--ink);
+  padding: 4rem 2.5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-label {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: 2.8rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  line-height: 1;
+}
+
+.section-label.yellow { color: var(--yellow); }
+.section-label.pink { color: var(--pink); }
+.section-label.cyan { color: var(--cyan); }
+
+.section-counter {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.70);
+  letter-spacing: 0.1em;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.focus-card {
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  padding: 2.25rem 2rem;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.focus-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.focus-card.c-pink::before { background: var(--pink); }
+.focus-card.c-cyan::before { background: var(--cyan); }
+.focus-card.c-yellow::before { background: var(--yellow); }
+
+.focus-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.65); }
+.focus-card:hover::before { opacity: 1; }
+
+.focus-num {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 1.25rem;
+}
+
+.focus-title {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: 1.9rem;
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.focus-card.c-pink .focus-title { color: var(--pink); }
+.focus-card.c-cyan .focus-title { color: var(--cyan); }
+.focus-card.c-yellow .focus-title { color: var(--yellow); }
+
+.focus-desc {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.80);
+  line-height: 1.8;
+}
+
+.focus-arrow {
+  margin-top: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.70);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.focus-card:hover .focus-arrow { color: var(--white); gap: 0.85rem; }
+.focus-card.c-pink:hover .focus-arrow { color: var(--pink); }
+.focus-card.c-cyan:hover .focus-arrow { color: var(--cyan); }
+.focus-card.c-yellow:hover .focus-arrow { color: var(--yellow); }
+
+/* ── ABOUT ── */
+.about-section {
+  background: var(--yellow);
+  padding: 4rem 2.5rem;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-img-wrap {
+  position: relative;
+}
+
+.about-img-frame {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--pink);
+  border: 3px solid var(--ink);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-img-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bebas); font-weight: 400;
+  font-size: 5rem;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.05em;
+}
+
+.about-shadow {
+  position: absolute;
+  top: 8px; left: 8px;
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--ink);
+  z-index: -1;
+}
+
+.about-name {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: 3rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 1.75rem;
+}
+
+.about-body {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(17,17,17,0.85);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  max-width: 56ch;
+}
+
+.about-body strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.about-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.pill {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border: 1.5px solid var(--ink);
+}
+
+.pill.p-ink { background: var(--ink); color: var(--yellow); }
+.pill.p-pink { background: var(--pink); color: var(--white); border-color: var(--pink-dark); }
+.pill.p-cyan { background: var(--cyan); color: var(--ink); border-color: #009aaa; }
+.pill.p-white { background: var(--white); color: var(--ink); }
+
+.about-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-langs {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1.5px solid rgba(17,17,17,0.15);
+}
+
+.about-lang-item {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.80);
+}
+
+.about-lang-item strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--ink);
+  margin-top: 0.2rem;
+  font-family: var(--body);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ── CAPABILITIES ── */
+.caps-section {
+  background: var(--off-white);
+  padding: 4rem 2.5rem;
+  border-bottom: 3px solid var(--ink);
+}
+
+.caps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1.5px solid var(--ink);
+}
+
+.cap-item {
+  padding: 1.5rem 1.25rem;
+  border-right: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  text-decoration: none;
+  display: block;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.cap-item:nth-child(4n) { border-right: none; }
+.cap-item:nth-last-child(-n+4) { border-bottom: none; }
+
+.cap-item:hover { background: var(--yellow); }
+
+.cap-name {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.cap-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--pink);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.cap-item:hover .cap-dot { background: var(--ink); }
+
+/* ── WORK STRIP ── */
+.work-strip {
+  background: var(--pink);
+  padding: 3.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+
+.work-headline {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 0.03em;
+  color: var(--white);
+  line-height: 1;
+}
+
+.work-headline span { color: var(--yellow); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.70);
+  text-transform: uppercase;
+}
+
+.footer-link {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-link:hover { color: var(--yellow); }
+
+/* ── ANIMATIONS ── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-eyebrow  { animation: slideUp 0.5s 0.05s both; }
+.hero-headline { animation: slideUp 0.6s 0.15s both; }
+.hero-desc     { animation: slideUp 0.6s 0.3s both; }
+.hero-ctas     { animation: slideUp 0.5s 0.4s both; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero { padding: 2.5rem 1.25rem 0; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
+  .hero-ctas { margin: 0 -1.25rem; padding: 2rem 1.25rem; }
+  .focus-section, .about-section, .caps-section { padding: 3rem 1.25rem; }
+  .focus-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-img-frame { aspect-ratio: 4/3; }
+  .caps-grid { grid-template-columns: repeat(2, 1fr); }
+  .cap-item:nth-child(4n) { border-right: 1.5px solid var(--ink); }
+  .cap-item:nth-child(2n) { border-right: none; }
+  .work-strip { padding: 2.5rem 1.25rem; }
+  footer { padding: 1.5rem 1.25rem; }
+  .accessibility-highlight {
+    padding: 2.5rem 1.25rem !important;
+  }
+  .accessibility-highlight-inner {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  .accessibility-highlight-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 200; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--yellow); transition: all 0.25s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav { display: none; position: fixed; top: 60px; left: 0; right: 0; bottom: 0; background: var(--ink); z-index: 99; flex-direction: column; padding: 2.5rem; gap: 0; overflow-y: auto; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.80); text-decoration: none; padding: 1rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.08); transition: color 0.15s; }
+.mobile-nav a:hover { color: var(--yellow); }
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Jennifer Simonds-Spellmann</a>
+  <ul class="nav-links">
+    <li><a href="work.html">Work</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="about.html">About</a>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a>
+  <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
+</div>
+
+<!-- HERO -->
+<section class="hero stripe">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <span>●</span> Product Design Innovation · Berlin
+      </div>
+      <h1 class="hero-headline">
+        Product<br>
+        <span class="hl-pink">Design</span><br>
+        <span class="hl-white">That</span><br>
+        Delivers.
+      </h1>
+      <p class="hero-desc">
+        End-to-end product design leadership for AI systems, regulated technology, and complex digital services — with 10+ years designing for real users including vulnerable populations, and delivering to the highest accessibility standards (BITV/WCAG).
+      </p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val">10+</div>
+        <div class="hero-stat-label">Years leading<br>product design</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">1M+</div>
+        <div class="hero-stat-label">Users on<br>certified products</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">64</div>
+        <div class="hero-stat-label">Team scaled<br>from 6</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">BITV</div>
+        <div class="hero-stat-label">Highest accessibility <br>criteria certified<certified</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-ctas">
+    <span class="hero-cta-text">Ready to see the work?</span>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="case-studies.html" class="cta-btn cta-btn-primary">View case studies →</a>
+      <a href="workshops.html" class="cta-btn cta-btn-ghost">Workshops →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS AREAS -->
+<section class="focus-section">
+  <div class="section-header">
+    <span class="section-label yellow">Focus Areas</span>
+    <span class="section-counter">— 04</span>
+  </div>
+  <div class="focus-grid">
+
+    <a href="case-studies.html" class="focus-card c-pink">
+      <div class="focus-num">01 / 04</div>
+      <h2 class="focus-title">AI &amp; Innovation<br>Design</h2>
+      <p class="focus-desc">From speculative future concepts to shipped AI products — trend research, design narratives, prototypes and storyboards that bring emerging opportunities to life. Grounded in real user behaviour, business feasibility, and the edge cases that matter.</p>
+      <div class="focus-arrow">View case studies <span>→</span></div>
+    </a>
+
+    <a href="work.html" class="focus-card c-cyan">
+      <div class="focus-num">02 / 04</div>
+      <h2 class="focus-title">Design Leadership<br>&amp; Team Development</h2>
+      <p class="focus-desc">Leading, mentoring and growing designers and researchers — from 6 to 64 people. Defining UX vision and strategy, driving end-to-end design quality, and embedding research, product discovery and Lean UX into agile product teams across the full lifecycle.</p>
+      <div class="focus-arrow">Selected work <span>→</span></div>
+    </a>
+
+    <a href="workshops.html" class="focus-card c-yellow">
+      <div class="focus-num">03 / 04</div>
+      <h2 class="focus-title">Research Strategy<br>&amp; Facilitation</h2>
+      <p class="focus-desc">Driving research systematically — usability testing, co-creation workshops, pilot programmes and participatory design. Translating qualitative and quantitative insight into design decisions that improve task success, adoption and user satisfaction.</p>
+      <div class="focus-arrow">About workshops <span>→</span></div>
+    </a>
+
+    <a href="work.html#systems" class="focus-card c-pink">
+      <div class="focus-num">04 / 04</div>
+      <h2 class="focus-title">Design Systems<br>&amp; Design Ops</h2>
+      <p class="focus-desc">Building the infrastructure that keeps quality consistent at scale — accessible design systems, AI-assisted workflows, design ops processes, and close collaboration with front-end leads to maintain standards across complex platforms.</p>
+      <div class="focus-arrow">Systems work <span>→</span></div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ACCESSIBILITY HIGHLIGHT -->
+<section class="accessibility-highlight" style="background:var(--cyan);padding:3.5rem 2.5rem;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);">
+  <div class="accessibility-highlight-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <div>
+      <p style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(17,17,17,0.5);margin-bottom:1rem;">Accessibility & Inclusion</p>
+      <h2 style="font-family:var(--bebas);font-weight:400;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:0.03em;color:var(--ink);line-height:1;margin-bottom:1.5rem;">Designing for everyone.<br>Not just the average user.</h2>
+      <p style="font-size:1rem;font-weight:300;color:rgba(17,17,17,0.7);line-height:1.8;max-width:46ch;">I design products that work for the full spectrum of users — including elderly, disabled, cognitively impaired, and digitally excluded populations. Certified to the <strong style="color:var(--ink);font-weight:500;">highest BITV criteria</strong> — Germany's most stringent accessibility standard — and experienced applying WCAG 2.1 AA/AAA across native Android, iOS, and web.</p>
+    </div>
+    <div class="accessibility-highlight-cards" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+      <div style="background:var(--ink);padding:1.5rem;">
+        <p style="font-family:var(--bebas);font-weight:400;font-size:2rem;letter-spacing:0.04em;color:var(--yellow);margin-bottom:0.5rem;">BITV</p>
+        <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Highest accessibility criteria certified — Germany's national standard</p>
+      </div>
+      <div style="background:var(--ink);padding:1.5rem;">
+        <p style="font-family:var(--bebas);font-weight:400;font-size:2rem;letter-spacing:0.04em;color:var(--pink);margin-bottom:0.5rem;">WCAG</p>
+        <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">2.1 AA/AAA across web, iOS & Android</p>
+      </div>
+      <div style="background:var(--ink);padding:1.5rem;">
+        <p style="font-family:var(--bebas);font-weight:400;font-size:2rem;letter-spacing:0.04em;color:var(--cyan);margin-bottom:0.5rem;">1M+</p>
+        <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Users on fully accessible certified government app</p>
+      </div>
+      <div style="background:var(--ink);padding:1.5rem;">
+        <p style="font-family:var(--bebas);font-weight:400;font-size:2rem;letter-spacing:0.04em;color:var(--yellow);margin-bottom:0.5rem;">#1</p>
+        <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">First BITV-certified government app in Germany</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="section-header">
+    <span class="section-label pink">About</span>
+  </div>
+  <div class="about-layout">
+    <div class="about-img-wrap">
+      <div class="about-shadow"></div>
+      <div class="about-img-frame">
+        <div class="about-img-placeholder" style="padding:0; overflow:hidden;">
+        <img src="jennifer_2_2x.png" alt="Jennifer Simonds-Spellmann" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+      </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="about-name">Senior Design Lead.<br>Berlin-based. Dual citizen.</h2>
+      <p class="about-body">
+        I lead product design for <strong>complex, high-stakes systems</strong> — defining UX vision and strategy, growing design teams, and shipping products that work for the people who depend on them most.
+      </p>
+      <p class="about-body">
+        10+ years across AI product design, government digital services, and regulated technology. Most recently Senior UX/AI Design Specialist at Bundesdruckerei — <strong>scaled a design team from 6 to 64</strong>, delivered Germany's first BITV-certified government app with 1M+ downloads, and led design ops, design systems, and research strategy across the organisation.
+      </p>
+      <p class="about-body">
+        Equally comfortable with <strong>speculative innovation and future-focused concepts</strong> as with the rigour of shipping production-ready products through agile delivery. I design for the full spectrum of users — including elderly, disabled, and cognitively impaired populations — and hold certification to the <strong>highest BITV criteria</strong>. MA in Design for Responsible AI. Fluent in English and German (C2).
+      </p>
+
+      <div class="about-pills">
+        <span class="pill p-ink">AI Product Design</span>
+        <span class="pill p-pink">Speculative Design</span>
+        <span class="pill p-cyan">Design Systems</span>
+        <span class="pill p-white">Design Ops</span>
+        <span class="pill p-ink">Design Leadership</span>
+        <span class="pill p-pink">Research Strategy</span>
+        <span class="pill p-cyan">Lean UX & Agile</span>
+        <span class="pill p-white">Workshop Facilitation</span>
+        <span class="pill p-ink">BITV / WCAG</span>
+        <span class="pill p-pink">Prototyping</span>
+        <span class="pill p-cyan">Participatory Design</span>
+        <span class="pill p-white">Visual Design</span>
+      </div>
+
+      <div class="about-langs">
+        <div class="about-lang-item">Language<strong>🇬🇧 English — Fluent</strong></div>
+        <div class="about-lang-item">Language<strong>🇩🇪 German — Fluent</strong></div>
+        <div class="about-lang-item">Based<strong>Berlin, Germany</strong></div>
+      </div>
+
+      <div class="about-links">
+        <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="cta-btn cta-btn-primary" style="background:var(--ink);color:var(--yellow);">Connect on LinkedIn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES GRID -->
+<section class="caps-section">
+  <div class="section-header">
+    <span class="section-label" style="color:var(--ink);">Capabilities</span>
+    <span class="section-counter" style="color:rgba(17,17,17,0.35);">— 12</span>
+  </div>
+  <div class="caps-grid">
+    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">AI Product Design</span></a>
+    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Speculative & Innovation Design</span></a>
+    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">UX Vision & Strategy</span></a>
+    <a href="workshops.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Research Strategy & Testing</span></a>
+    <a href="work.html#systems" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Systems & Governance</span></a>
+    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Ops & Process</span></a>
+    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Leadership & Coaching</span></a>
+    <a href="workshops.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Workshop Facilitation</span></a>
+    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Concept & Prototyping</span></a>
+    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Lean UX & Agile</span></a>
+    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Accessibility (BITV/WCAG)</span></a>
+    <a href="about.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Cross-functional Collaboration</span></a>
+  </div>
+</section>
+
+<!-- WORK CTA -->
+<section class="work-strip stripe">
+  <h2 class="work-headline">10+ years of work.<br><span>Let's look at it.</span></h2>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+    <a href="case-studies.html" class="cta-btn cta-btn-primary">Case studies →</a>
+    <a href="about.html" class="cta-btn" style="background:var(--white);color:var(--ink);">About me →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="/" class="footer-logo">Jennifer Simonds-Spellmann</a>
+  <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="footer-link">LinkedIn ↗</a>
+</footer>
+
+<script>
+const h = document.getElementById("hamburger");
+const m = document.getElementById("mobileNav");
+
+if (h && m) {
+  const closeMenu = () => {
+    h.classList.remove("open");
+    m.classList.remove("open");
+    h.setAttribute("aria-expanded", "false");
+  };
+
+  const toggleMenu = () => {
+    const isOpen = h.classList.toggle("open");
+    m.classList.toggle("open", isOpen);
+    h.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  h.addEventListener("click", toggleMenu);
+  m.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) closeMenu();
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+}
+</script>
+</body>
+</html>

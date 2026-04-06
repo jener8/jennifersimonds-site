@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workshops — Jennifer Simonds-Spellmann</title>
+<meta name="description" content="Innovation facilitation and UX workshops by Jennifer Simonds-Spellmann — EU Commission cross-border digital services, health startup product discovery, design thinking sprints in English and German.">
+<meta property="og:title" content="Workshops — Jennifer Simonds-Spellmann">
+<meta property="og:description" content="Innovation facilitation and UX workshops in English and German — EU, health tech, product teams.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jennifersimonds.com/workshops">
+<link rel="canonical" href="https://jennifersimonds.com/workshops">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --yellow: #FFD93D; --pink: #FF3DA0; --pink-dark: #CC1F7A;
+  --cyan: #00C4D4; --ink: #111111; --white: #FFFFFF; --off-white: #FAFAF7;
+  --stripe-color: rgba(0,0,0,0.055);
+  --bebas: 'Bebas Neue', Impact, sans-serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --mono: 'Space Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--off-white); color: var(--ink); font-family: var(--body); font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.stripe { background-image: repeating-linear-gradient(-45deg, var(--stripe-color) 0px, var(--stripe-color) 2px, transparent 2px, transparent 12px); }
+nav { position: sticky; top: 0; z-index: 100; background: var(--ink); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 60px; }
+.nav-logo { font-family: var(--bebas); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.06em; color: var(--yellow); text-decoration: none; }
+.nav-links { display: flex; list-style: none; }
+.nav-links a { display: block; padding: 0 1.25rem; height: 60px; line-height: 60px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.80); text-decoration: none; transition: color 0.15s; border-left: 0.5px solid rgba(255,255,255,0.08); }
+.nav-links a:hover, .nav-links a.active { color: var(--yellow); }
+footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--bebas); font-weight: 400; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--yellow); text-decoration: none; }
+.footer-copy { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.75); text-transform: uppercase; }
+.footer-link { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); text-decoration: none; }
+.footer-link:hover { color: var(--yellow); }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.8rem; font-family: var(--mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.15s; }
+.btn-ink { background: var(--ink); color: var(--yellow); }
+.btn-ink:hover { background: #333; }
+
+/* PAGE HERO — yellow */
+.page-hero { background: var(--yellow); padding: 3rem 2.5rem 3.5rem; border-bottom: 3px solid var(--ink); }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(17,17,17,0.75); text-decoration: none; margin-bottom: 2rem; transition: color 0.15s; }
+.back-link:hover { color: var(--ink); }
+.page-eyebrow { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.80); margin-bottom: 1rem; }
+.page-title { font-family: var(--bebas); font-weight: 400; font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: 0.02em; line-height: 0.92; color: var(--ink); }
+.page-title .ac-pink { color: var(--pink); }
+.page-subtitle { margin-top: 1.5rem; max-width: 44rem; font-size: 1rem; font-weight: 300; line-height: 1.75; color: rgba(17,17,17,0.85); }
+
+/* FORMAT EXPLAINER */
+.formats-section { background: var(--ink); padding: 4rem 2.5rem; }
+.section-label { font-family: var(--bebas); font-weight: 400; font-size: 2.2rem; letter-spacing: 0.04em; line-height: 1; margin-bottom: 2.5rem; }
+.section-label.yellow { color: var(--yellow); }
+.formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.format-card { background: rgba(255,255,255,0.04); border: 1.5px solid rgba(255,255,255,0.1); padding: 2rem 1.75rem; position: relative; overflow: hidden; }
+.format-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.format-card.c-pink::before { background: var(--pink); }
+.format-card.c-cyan::before { background: var(--cyan); }
+.format-card.c-yellow::before { background: var(--yellow); }
+.format-icon { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; margin-bottom: 1rem; }
+.format-icon.pink { color: var(--pink); }
+.format-icon.cyan { color: var(--cyan); }
+.format-icon.yellow { color: var(--yellow); }
+.format-title { font-family: var(--bebas); font-weight: 400; font-size: 1.5rem; letter-spacing: 0.03em; color: var(--white); margin-bottom: 0.75rem; }
+.format-body { font-size: 0.875rem; font-weight: 300; color: rgba(255,255,255,0.80); line-height: 1.8; }
+.format-meta { margin-top: 1.25rem; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+
+/* CASE STUDIES */
+.workshop-cases { padding: 4rem 2.5rem; background: var(--off-white); }
+.workshop-case { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; padding: 3rem 0; border-bottom: 1.5px solid rgba(17,17,17,0.08); align-items: start; }
+.workshop-case:last-child { border-bottom: none; }
+.wcase-meta { }
+.wcase-num { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; color: rgba(17,17,17,0.65); margin-bottom: 0.75rem; }
+.wcase-tag { font-family: var(--mono); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.65rem; margin-bottom: 1.25rem; display: inline-block; }
+.wcase-tag.t-pink { background: var(--pink); color: var(--white); }
+.wcase-tag.t-cyan { background: var(--cyan); color: var(--ink); }
+.wcase-big { font-family: var(--bebas); font-weight: 400; font-size: 4rem; letter-spacing: 0.02em; line-height: 1; color: var(--ink); }
+.wcase-detail-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.70); margin-top: 1.5rem; margin-bottom: 0.4rem; }
+
+.wcase-content-title { font-family: var(--bebas); font-weight: 400; font-size: 2rem; letter-spacing: 0.03em; color: var(--ink); line-height: 1.05; margin-bottom: 1rem; }
+.wcase-body { font-size: 0.925rem; font-weight: 300; color: rgba(17,17,17,0.7); line-height: 1.85; margin-bottom: 1.25rem; }
+.wcase-body strong { color: var(--ink); font-weight: 500; }
+.wcase-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
+.wcase-list li { font-size: 0.875rem; font-weight: 300; color: rgba(17,17,17,0.7); padding-left: 1.25rem; position: relative; line-height: 1.55; }
+.wcase-list li::before { content: '→'; position: absolute; left: 0; color: var(--pink); font-size: 0.72rem; top: 0.05em; }
+.wcase-outcome { background: var(--yellow); padding: 1.25rem 1.5rem; margin-top: 0.5rem; border-left: 3px solid var(--ink); }
+.wcase-outcome-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.75); margin-bottom: 0.4rem; }
+.wcase-outcome-text { font-size: 0.9rem; font-weight: 400; color: var(--ink); line-height: 1.6; }
+
+/* METHODS */
+.methods-section { background: var(--pink); padding: 4rem 2.5rem; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+.methods-label { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; color: var(--white); margin-bottom: 0.5rem; }
+.methods-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.7); max-width: 40rem; margin-bottom: 2.5rem; line-height: 1.75; }
+.methods-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(255,255,255,0.2); }
+.method-item { background: var(--pink); padding: 1.75rem 1.5rem; }
+.method-name { font-family: var(--bebas); font-weight: 400; font-size: 1.3rem; letter-spacing: 0.04em; color: var(--white); margin-bottom: 0.5rem; }
+.method-desc { font-size: 0.85rem; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.75; }
+
+/* CTA */
+.cta-strip { background: var(--ink); padding: 3.5rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.cta-text { font-family: var(--bebas); font-weight: 400; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--white); letter-spacing: 0.03em; line-height: 1; }
+.cta-text span { color: var(--yellow); }
+
+@media (max-width: 860px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-hero, .formats-section, .workshop-cases, .methods-section, .cta-strip { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .formats-grid { grid-template-columns: 1fr; }
+  .workshop-case { grid-template-columns: 1fr; gap: 1.5rem; }
+  .methods-grid { grid-template-columns: 1fr; }
+  footer { padding: 1.5rem 1.25rem; }
+}
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 200; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--yellow); transition: all 0.25s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav { display: none; position: fixed; top: 60px; left: 0; right: 0; bottom: 0; background: var(--ink); z-index: 99; flex-direction: column; padding: 2.5rem; gap: 0; overflow-y: auto; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.80); text-decoration: none; padding: 1rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.08); transition: color 0.15s; }
+.mobile-nav a:hover { color: var(--yellow); }
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Jennifer Simonds-Spellmann</a>
+  <ul class="nav-links">
+    <li><a href="work.html">Work</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="workshops.html" class="active">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="about.html">About</a>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a>
+  <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
+</div>
+
+<section class="page-hero stripe">
+  <a href="index.html" class="back-link">← Back to home</a>
+  <p class="page-eyebrow">Innovation Facilitation & Workshop Design</p>
+  <h1 class="page-title">Move Teams<br><span class="ac-pink">From Stuck</span><br>to Shipped.</h1>
+  <p class="page-subtitle">I design and facilitate workshops that do actual work — aligning stakeholders, unblocking product decisions, and building shared understanding across disciplines, organisations, and borders.</p>
+</section>
+
+<!-- FORMATS -->
+<section class="formats-section">
+  <p class="section-label yellow">Workshop Formats</p>
+  <div class="formats-grid">
+    <div class="format-card c-pink">
+      <p class="format-icon pink">01</p>
+      <h2 class="format-title">Online Facilitation</h2>
+      <p class="format-body">Miro-based collaborative sessions for distributed teams and cross-border organisations. Designed for alignment, not just attendance — with clear outcomes before anyone joins the call.</p>
+      <p class="format-meta">Remote · Miro · Distributed teams</p>
+    </div>
+    <div class="format-card c-cyan">
+      <p class="format-icon cyan">02</p>
+      <h2 class="format-title">In-Person Design Thinking</h2>
+      <p class="format-body">Hands-on sessions with technical and business stakeholders, guiding teams through creative design thinking methods to define user journeys, surface risks, and build shared product vision.</p>
+      <p class="format-meta">On-site · Full or half day · Mixed stakeholders</p>
+    </div>
+    <div class="format-card c-yellow">
+      <p class="format-icon yellow">03</p>
+      <h2 class="format-title">Product Discovery Sprints</h2>
+      <p class="format-body">Early-stage product definition workshops that translate vision into storyboards, epics, and roadmaps. Designed to get founders, designers, developers, and investors pointing in the same direction.</p>
+      <p class="format-meta">Startup · Scale-up · Strategic pivots</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORKSHOP CASE STUDIES -->
+<section class="workshop-cases">
+  <div class="section-label" style="font-family: var(--bebas); font-weight: 400; font-size: 2.2rem; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 0;">Workshop Case Studies</div>
+
+  <!-- Case 1: EU Commission -->
+  <div class="workshop-case">
+    <div class="wcase-meta">
+      <p class="wcase-num">01 / 02</p>
+      <span class="wcase-tag t-pink">EU · Public Sector · Cross-Border</span>
+      <p class="wcase-big">EU<br>GOV</p>
+      <p class="wcase-detail-label">Format</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Online (Miro) + In-person</p>
+      <p class="wcase-detail-label">Stakeholders</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">EU Commission, German Government, technical leads, UX teams</p>
+      <p class="wcase-detail-label">Scope</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Cross-border UI integration across multiple EU member states</p>
+    </div>
+    <div>
+      <h2 class="wcase-content-title">EU Commission UX Workshops & Cross-Border Digital Services Integration</h2>
+      <div style="margin-bottom:1.5rem;position:relative;overflow:hidden;max-height:280px;">
+        <img src="eu-ux-workshop.png" alt="EU UX Workshops in session" style="width:100%;object-fit:cover;object-position:center;display:block;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));padding:1rem 1.25rem;">
+          <p style="font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin:0;">Research persona — workshop artefacts confidential under NDA</p>
+        </div>
+      </div>
+      <p class="wcase-body">I led <strong>Miro-based UX workshops with the EU Commission</strong>, representing the German Government in discussions on user interface integration across borders. These sessions focused on aligning different nations' design standards, regulations, and user needs to ensure a seamless experience across member states.</p>
+      <p class="wcase-body">In-person, I facilitated workshops with technical and business stakeholders — guiding teams through <strong>creative design thinking methods</strong> to define the user journey for the app. The challenge was bridging the gap between business goals, technical feasibility, and very different national user expectations.</p>
+      <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(17,17,17,0.35);margin-bottom:0.65rem;">What these sessions delivered</p>
+      <ul class="wcase-list">
+        <li>Shared design language and UI standards aligned across multiple EU member states</li>
+        <li>User journey maps co-created with technical and policy stakeholders</li>
+        <li>Clear handover documentation bridging design decisions to development</li>
+        <li>A cross-border user research framework adaptable for future EU digital services</li>
+      </ul>
+      <div class="wcase-outcome">
+        <p class="wcase-outcome-label">Outcome</p>
+        <p class="wcase-outcome-text">A user-centred framework for cross-border digital services — built through genuine collaboration between nations rather than imposed from the top down.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case 2: Health Startup -->
+  <div class="workshop-case">
+    <div class="wcase-meta">
+      <p class="wcase-num">02 / 02</p>
+      <span class="wcase-tag t-cyan">Health Tech · Startup · Product Discovery</span>
+      <p class="wcase-big">HEALTH<br>TECH</p>
+      <p class="wcase-detail-label">Format</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Product discovery sprint + stakeholder alignment</p>
+      <p class="wcase-detail-label">Stakeholders</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Founders, clinical advisors, development team, investors</p>
+      <p class="wcase-detail-label">Scope</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Early-stage product definition for a cross-border health app</p>
+    </div>
+    <div>
+      <h2 class="wcase-content-title">Defining the Vision for a Health Startup App</h2>
+      <div style="margin-bottom:1.5rem;background:var(--yellow);border:1.5px solid rgba(17,17,17,0.12);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:0.75rem;max-height:280px;justify-content:center;">
+        <p style="font-family:var(--bebas);font-weight:400;font-size:2.5rem;letter-spacing:0.04em;color:var(--ink);line-height:1;">Product Discovery Sprint</p>
+        <p style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(17,17,17,0.45);">Storyboards · Epics · Wireframes · Personas</p>
+        <p style="font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(17,17,17,0.35);margin-top:0.5rem;">Workshop artefacts confidential — NDA</p>
+      </div>
+      <p class="wcase-body">I helped a health tech startup <strong>translate their vision into a structured product roadmap</strong> — taking them from an ambitious idea to a clear, buildable plan. The challenge was getting a diverse group of stakeholders (founders, clinicians, developers, investors) aligned on what to build first, and why.</p>
+      <p class="wcase-body">Using participatory design methods, I guided the team through a series of workshops that moved from big-picture vision to concrete, prioritised epics — with the user always at the centre.</p>
+      <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(17,17,17,0.35);margin-bottom:0.65rem;">What these sessions delivered</p>
+      <ul class="wcase-list">
+        <li>Aligned stakeholders on business goals and user experience priorities</li>
+        <li>Storyboards, epics, and wireframes defining the full product journey</li>
+        <li>Cross-border personas highlighting diverse user needs across markets</li>
+        <li>A UX foundation balancing innovation, clinical feasibility, and product strategy</li>
+      </ul>
+      <div class="wcase-outcome">
+        <p class="wcase-outcome-label">Outcome</p>
+        <p class="wcase-outcome-text">A scalable, user-centred app roadmap aligned with the startup's long-term goals — and a team that understood exactly what they were building and who it was for.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODS -->
+<section class="methods-section stripe">
+  <p class="methods-label">Workshop Methods</p>
+  <p class="methods-sub">I draw on a toolkit of proven facilitation methods — choosing the right combination based on where the team is stuck and what they need to produce.</p>
+  <div class="methods-grid">
+    <div class="method-item">
+      <p class="method-name">Design Thinking Sprints</p>
+      <p class="method-desc">Structured problem-solving in compressed time — from problem statement to testable concept in a day or two.</p>
+    </div>
+    <div class="method-item">
+      <p class="method-name">Co-Creation Sessions</p>
+      <p class="method-desc">Bringing users, designers, engineers, and policymakers into the same room to build shared understanding of needs and risks.</p>
+    </div>
+    <div class="method-item">
+      <p class="method-name">Stakeholder Mapping</p>
+      <p class="method-desc">Surfacing who has power, who has needs, and who's missing from the conversation — before it becomes a problem.</p>
+    </div>
+    <div class="method-item">
+      <p class="method-name">Journey Mapping</p>
+      <p class="method-desc">Making invisible user flows visible — as a shared artefact that anchors conversations between disciplines.</p>
+    </div>
+    <div class="method-item">
+      <p class="method-name">Assumption Mapping</p>
+      <p class="method-desc">Getting risky assumptions out of people's heads and onto the wall — so teams can test what matters most first.</p>
+    </div>
+    <div class="method-item">
+      <p class="method-name">Participatory Design</p>
+      <p class="method-desc">Putting the people who live with a problem in the driving seat of solving it — especially for vulnerable or underserved populations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip stripe">
+  <h2 class="cta-text">Ready to run<br><span>a workshop?</span></h2>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="btn btn-ink">Get in touch →</a>
+    <a href="case-studies.html" class="btn" style="background:rgba(255,255,255,0.1);color:var(--white);border:1.5px solid rgba(255,255,255,0.3);">See case studies →</a>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="footer-logo">Jennifer Simonds-Spellmann</a>
+  <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="footer-link">LinkedIn ↗</a>
+</footer>
+
+<script>
+const h = document.getElementById("hamburger");
+const m = document.getElementById("mobileNav");
+
+if (h && m) {
+  const closeMenu = () => {
+    h.classList.remove("open");
+    m.classList.remove("open");
+    h.setAttribute("aria-expanded", "false");
+  };
+
+  const toggleMenu = () => {
+    const isOpen = h.classList.toggle("open");
+    m.classList.toggle("open", isOpen);
+    h.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  h.addEventListener("click", toggleMenu);
+  m.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) closeMenu();
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+}
+</script>
+</body>
+</html>

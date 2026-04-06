@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Jennifer Simonds-Spellmann</title>
+<meta name="description" content="Selected product design work by Jennifer Simonds-Spellmann — i-Kfz government app, EU digital identity, Ryse health IoT app, and AI literacy research.">
+<meta property="og:title" content="Work — Jennifer Simonds-Spellmann">
+<meta property="og:description" content="Selected product design work — government apps, health tech, AI literacy, EU digital services.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jennifersimonds.com/work">
+<link rel="canonical" href="https://jennifersimonds.com/work">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --yellow: #FFD93D; --pink: #FF3DA0; --pink-dark: #CC1F7A;
+  --cyan: #00C4D4; --ink: #111111; --white: #FFFFFF; --off-white: #FAFAF7;
+  --stripe-color: rgba(0,0,0,0.055);
+  --bebas: 'Bebas Neue', Impact, sans-serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --mono: 'Space Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--off-white); color: var(--ink); font-family: var(--body); font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.stripe { background-image: repeating-linear-gradient(-45deg, var(--stripe-color) 0px, var(--stripe-color) 2px, transparent 2px, transparent 12px); }
+nav { position: sticky; top: 0; z-index: 100; background: var(--ink); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 60px; }
+.nav-logo { font-family: var(--bebas); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.06em; color: var(--yellow); text-decoration: none; }
+.nav-links { display: flex; list-style: none; }
+.nav-links a { display: block; padding: 0 1.25rem; height: 60px; line-height: 60px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.80); text-decoration: none; transition: color 0.15s; border-left: 0.5px solid rgba(255,255,255,0.08); }
+.nav-links a:hover, .nav-links a.active { color: var(--yellow); }
+footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--bebas); font-weight: 400; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--yellow); text-decoration: none; }
+.footer-copy { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.75); text-transform: uppercase; }
+.footer-link { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); text-decoration: none; }
+.footer-link:hover { color: var(--yellow); }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.8rem; font-family: var(--mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.15s; }
+.btn-ink { background: var(--ink); color: var(--yellow); }
+.btn-ink:hover { background: #333; }
+
+/* PAGE HERO — cyan */
+.page-hero { background: var(--cyan); padding: 3rem 2.5rem 3.5rem; border-bottom: 3px solid var(--ink); }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(17,17,17,0.75); text-decoration: none; margin-bottom: 2rem; transition: color 0.15s; }
+.back-link:hover { color: var(--ink); }
+.page-eyebrow { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.80); margin-bottom: 1rem; }
+.page-title { font-family: var(--bebas); font-weight: 400; font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: 0.02em; line-height: 0.92; color: var(--ink); }
+.page-title .ac-pink { color: var(--pink); }
+.page-subtitle { margin-top: 1.5rem; max-width: 44rem; font-size: 1rem; font-weight: 300; line-height: 1.75; color: rgba(17,17,17,0.85); }
+
+/* STATS BAR */
+.stats-bar { background: var(--ink); padding: 2rem 2.5rem; display: flex; gap: 0; border-bottom: 3px solid var(--ink); }
+.stat-block { flex: 1; padding: 0 2rem; border-right: 0.5px solid rgba(255,255,255,0.1); text-align: center; }
+.stat-block:first-child { padding-left: 0; text-align: left; }
+.stat-block:last-child { border-right: none; }
+.stat-val { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.03em; color: var(--yellow); display: block; line-height: 1; }
+.stat-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-top: 0.35rem; display: block; }
+
+/* WORK ITEMS — big editorial list */
+.work-list { padding: 0 2.5rem; background: var(--white); }
+.work-item { display: grid; grid-template-columns: 80px 1fr auto; gap: 2rem; align-items: start; padding: 3rem 0; border-bottom: 1.5px solid rgba(17,17,17,0.08); position: relative; }
+.work-item:hover .wi-title { color: var(--pink); }
+.wi-num { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(17,17,17,0.25); padding-top: 0.6rem; }
+.wi-main { }
+.wi-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.wi-tag { font-family: var(--mono); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; }
+.wi-tag.t-pink { background: var(--pink); color: var(--white); }
+.wi-tag.t-cyan { background: var(--cyan); color: var(--ink); }
+.wi-tag.t-yellow { background: var(--yellow); color: var(--ink); }
+.wi-tag.t-ink { background: var(--ink); color: var(--yellow); }
+.wi-title { font-family: var(--bebas); font-weight: 400; font-size: 2rem; letter-spacing: 0.03em; color: var(--ink); line-height: 1.05; margin-bottom: 0.75rem; transition: color 0.15s; }
+.wi-desc { font-size: 0.9rem; font-weight: 300; color: rgba(17,17,17,0.85); line-height: 1.8; max-width: 60ch; }
+.wi-outcomes { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.25rem; }
+.wi-outcome { display: flex; align-items: baseline; gap: 0.75rem; }
+.wi-outcome-val { font-family: var(--bebas); font-weight: 400; font-size: 1.4rem; letter-spacing: 0.03em; color: var(--ink); line-height: 1; flex-shrink: 0; }
+.wi-outcome-label { font-size: 0.8rem; font-weight: 300; color: rgba(17,17,17,0.80); }
+.wi-link { flex-shrink: 0; align-self: center; }
+.wi-arrow { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(17,17,17,0.65); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s, gap 0.2s; white-space: nowrap; }
+.wi-arrow:hover { color: var(--pink); gap: 0.85rem; }
+
+/* DESIGN SYSTEMS SECTION */
+.systems-section { background: var(--ink); padding: 4rem 2.5rem; border-top: 3px solid var(--ink); }
+.systems-label { font-family: var(--bebas); font-weight: 400; font-size: 2.2rem; letter-spacing: 0.04em; color: var(--yellow); margin-bottom: 0.5rem; }
+.systems-sub { font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.80); max-width: 44rem; line-height: 1.75; margin-bottom: 2.5rem; }
+.systems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.sys-card { background: rgba(255,255,255,0.04); border: 1.5px solid rgba(255,255,255,0.1); padding: 2rem 1.75rem; }
+.sys-card-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.sys-card-label.pink { color: var(--pink); }
+.sys-card-label.cyan { color: var(--cyan); }
+.sys-card-label.yellow { color: var(--yellow); }
+.sys-card-title { font-family: var(--bebas); font-weight: 400; font-size: 1.4rem; letter-spacing: 0.03em; color: var(--white); margin-bottom: 0.75rem; }
+.sys-card-body { font-size: 0.85rem; font-weight: 300; color: rgba(255,255,255,0.80); line-height: 1.8; }
+
+/* CTA */
+.cta-strip { background: var(--yellow); padding: 3.5rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; border-top: 3px solid var(--ink); }
+.cta-text { font-family: var(--bebas); font-weight: 400; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--ink); letter-spacing: 0.03em; line-height: 1; }
+.cta-text span { color: var(--pink); }
+
+@media (max-width: 860px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-hero, .work-list, .systems-section, .cta-strip { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .stats-bar { flex-wrap: wrap; gap: 1.5rem; padding: 1.5rem 1.25rem; }
+  .stat-block { flex: 0 0 40%; border-right: none; padding: 0; text-align: left; }
+  .work-item { grid-template-columns: 48px 1fr; }
+  .wi-link { display: none; }
+  .systems-grid { grid-template-columns: 1fr; }
+  footer { padding: 1.5rem 1.25rem; }
+}
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 200; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--yellow); transition: all 0.25s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav { display: none; position: fixed; top: 60px; left: 0; right: 0; bottom: 0; background: var(--ink); z-index: 99; flex-direction: column; padding: 2.5rem; gap: 0; overflow-y: auto; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.80); text-decoration: none; padding: 1rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.08); transition: color 0.15s; }
+.mobile-nav a:hover { color: var(--yellow); }
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Jennifer Simonds-Spellmann</a>
+  <ul class="nav-links">
+    <li><a href="work.html" class="active">Work</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="about.html">About</a>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a>
+  <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
+</div>
+
+<section class="page-hero stripe">
+  <a href="index.html" class="back-link">← Back to home</a>
+  <p class="page-eyebrow">Selected Work — 10+ Years of Product Design</p>
+  <h1 class="page-title">What I've<br><span class="ac-pink">Built.</span></h1>
+  <p class="page-subtitle">A selection of the products, systems, and services I've designed — across government digital services, AI, health tech, and innovation facilitation. Real projects, real impact, real constraints.</p>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-block">
+    <span class="stat-val">1M+</span>
+    <span class="stat-label">Users on certified products</span>
+  </div>
+  <div class="stat-block">
+    <span class="stat-val">10+</span>
+    <span class="stat-label">Years product design</span>
+  </div>
+  <div class="stat-block">
+    <span class="stat-val">64</span>
+    <span class="stat-label">Team scaled from 6</span>
+  </div>
+  <div class="stat-block">
+    <span class="stat-val">2</span>
+    <span class="stat-label">Languages (EN / DE)</span>
+  </div>
+  <div class="stat-block">
+    <span class="stat-val">BITV</span>
+    <span class="stat-label">Accessibility certified</span>
+  </div>
+</div>
+
+<!-- WORK LIST -->
+<div class="work-list">
+
+  <div class="work-item">
+    <p class="wi-num">01</p>
+    <div class="wi-main">
+      <div class="wi-tags">
+        <span class="wi-tag t-cyan">Public Sector</span>
+        <span class="wi-tag t-ink">Native App</span>
+        <span class="wi-tag t-pink">Design System</span>
+        <span class="wi-tag t-yellow">BITV/WCAG</span>
+      </div>
+      <h2 class="wi-title">i-Kfz — Digital Driver's Licence & Vehicle Registration App</h2>
+      <img src="kfz-hero.png" alt="i-Kfz app screenshots" style="width:100%;max-width:700px;height:320px;object-fit:cover;object-position:center top;margin:1.25rem 0;display:block;border:1.5px solid rgba(17,17,17,0.1);">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;max-width:700px;margin-bottom:1.25rem;">
+        <img src="kfz-1.png" alt="i-Kfz screens" style="width:100%;height:160px;object-fit:cover;object-position:center top;display:block;border:1.5px solid rgba(17,17,17,0.08);">
+        <img src="kfz-2.png" alt="i-Kfz screens" style="width:100%;height:160px;object-fit:cover;object-position:center top;display:block;border:1.5px solid rgba(17,17,17,0.08);">
+        <img src="kfz-7.png" alt="i-Kfz in use" style="width:100%;height:160px;object-fit:cover;object-position:center top;display:block;border:1.5px solid rgba(17,17,17,0.08);">
+      </div>
+      <p class="wi-desc">Germany's first BITV-certified government app for digital driver's licences and vehicle registration — native Android and iOS, supporting sensitive authentication processes and accessible to all citizens. I led UX/UI design end-to-end, built and scaled the team, and owned the design system.</p>
+      <div class="wi-outcomes">
+        <div class="wi-outcome"><span class="wi-outcome-val">1M+</span><span class="wi-outcome-label">Downloads — Germany's most-used government app</span></div>
+        <div class="wi-outcome"><span class="wi-outcome-val">64</span><span class="wi-outcome-label">Person team scaled from a founding team of 6</span></div>
+        <div class="wi-outcome"><span class="wi-outcome-val">#1</span><span class="wi-outcome-label">First BITV-certified government app in Germany</span></div>
+      </div>
+    </div>
+    <div class="wi-link">
+      <a href="case-studies.html" class="wi-arrow">Case study <span>→</span></a>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="work-item">
+    <p class="wi-num">02</p>
+    <div class="wi-main">
+      <div class="wi-tags">
+        <span class="wi-tag t-pink">AI</span>
+        <span class="wi-tag t-cyan">UX Research</span>
+        <span class="wi-tag t-yellow">Regulated Tech</span>
+      </div>
+      <h2 class="wi-title">EU Digital Identity — UX Research & Trust Framework</h2>
+      <img src="eu-persona.png" alt="EU digital ID user persona — disabled driver stopped by police" style="width:100%;max-width:500px;height:220px;object-fit:cover;object-position:center 30%;display:block;border:1.5px solid rgba(17,17,17,0.08);margin:1.25rem 0;">
+      <p class="wi-desc">Research-led design for the EU's rollout of digital identity apps across member states. The challenge: making systems that feel secure and trustworthy to citizens — especially older adults and those unfamiliar with digital services. I developed a user research framework combining usability testing, co-creation, and system storytelling.</p>
+      <div class="wi-outcomes">
+        <div class="wi-outcome"><span class="wi-outcome-val">EU</span><span class="wi-outcome-label">Commission-level workshops, representing German Government</span></div>
+        <div class="wi-outcome"><span class="wi-outcome-val">5</span><span class="wi-outcome-label">Research methods combined into one integrated approach</span></div>
+      </div>
+    </div>
+    <div class="wi-link">
+      <a href="case-studies.html" class="wi-arrow">Case study <span>→</span></a>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="work-item">
+    <p class="wi-num">03</p>
+    <div class="wi-main">
+      <div class="wi-tags">
+        <span class="wi-tag t-pink">Health Tech</span>
+        <span class="wi-tag t-cyan">IoT</span>
+        <span class="wi-tag t-ink">B2C</span>
+      </div>
+      <h2 class="wi-title">Ryse — Health App with IoT-Connected Mood Interactions</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;max-width:400px;margin:1.25rem 0;">
+        <img src="ryse-1.jpeg" alt="Ryse home screen" style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;border:1.5px solid rgba(17,17,17,0.08);">
+        <img src="ryse-4.jpeg" alt="Ryse session length" style="width:100%;height:220px;object-fit:cover;object-position:top;display:block;border:1.5px solid rgba(17,17,17,0.08);">
+      </div>
+      <p class="wi-desc">End-to-end UX design for a B2C health app connecting with a biometric IoT device to influence users' moods. The design challenge was translating invisible, complex technology into an experience that felt intuitive and emotionally resonant for non-technical users across Android and iOS.</p>
+      <div class="wi-outcomes">
+        <div class="wi-outcome"><span class="wi-outcome-val">2</span><span class="wi-outcome-label">Platforms — Android and iOS, consistent cross-platform UX</span></div>
+        <div class="wi-outcome"><span class="wi-outcome-val">IoT</span><span class="wi-outcome-label">First health IoT design project — bridging device and app</span></div>
+      </div>
+    </div>
+    <div class="wi-link">
+      <a href="case-studies.html" class="wi-arrow">Case study <span>→</span></a>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="work-item">
+    <p class="wi-num">04</p>
+    <div class="wi-main">
+      <div class="wi-tags">
+        <span class="wi-tag t-yellow">AI Literacy</span>
+        <span class="wi-tag t-ink">Research</span>
+        <span class="wi-tag t-pink">Participatory Design</span>
+      </div>
+      <h2 class="wi-title">Seeing the Algorithm — AI Literacy Research Project</h2>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;max-width:500px;margin:1.25rem 0;">
+        <img src="algo-bubble-draw.jpg" alt="Child's drawing of algorithm as bubble" style="width:100%;height:200px;object-fit:cover;display:block;border:1.5px solid rgba(17,17,17,0.08);">
+        <img src="algo-bubble-ai.png" alt="AI interpretation of child's drawing" style="width:100%;height:200px;object-fit:cover;display:block;border:1.5px solid rgba(17,17,17,0.08);">
+      </div>
+      <p class="wi-desc">A participatory design and research project helping children gain AI literacy through drawing. Part of my MA in Design for Responsible AI — a school-based programme where young people visualise the algorithms shaping their digital lives, with a long-term archive of generational insight as the goal.</p>
+      <div class="wi-outcomes">
+        <div class="wi-outcome"><span class="wi-outcome-val">MA</span><span class="wi-outcome-label">Research project — Design for Responsible AI</span></div>
+        <div class="wi-outcome"><span class="wi-outcome-val">Self</span><span class="wi-outcome-label">Sustaining model funded through community sales</span></div>
+      </div>
+    </div>
+    <div class="wi-link">
+      <a href="case-studies.html" class="wi-arrow">Case study <span>→</span></a>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="work-item">
+    <p class="wi-num">05</p>
+    <div class="wi-main">
+      <div class="wi-tags">
+        <span class="wi-tag t-cyan">Facilitation</span>
+        <span class="wi-tag t-ink">EU</span>
+        <span class="wi-tag t-yellow">Cross-border</span>
+      </div>
+      <h2 class="wi-title">EU Commission UX Workshops — Cross-Border Digital Services</h2>
+      <img src="eu-ux-workshop.png" alt="EU UX Workshops — cross-border design thinking session" style="width:100%;max-width:500px;height:220px;object-fit:cover;object-position:center;display:block;border:1.5px solid rgba(17,17,17,0.08);margin:1.25rem 0;">
+      <p class="wi-desc">Led Miro-based and in-person UX workshops with the EU Commission, representing the German Government. Aligning different nations' design standards, regulations, and user needs to build a shared framework for cross-border digital public services.</p>
+      <div class="wi-outcomes">
+        <div class="wi-outcome"><span class="wi-outcome-val">EU</span><span class="wi-outcome-label">Commission engagement — multi-nation alignment</span></div>
+        <div class="wi-outcome"><span class="wi-outcome-val">2</span><span class="wi-outcome-label">Workshop formats: online (Miro) and in-person</span></div>
+      </div>
+    </div>
+    <div class="wi-link">
+      <a href="workshops.html" class="wi-arrow">Workshop details <span>→</span></a>
+    </div>
+  </div>
+
+</div>
+
+<!-- DESIGN SYSTEMS -->
+<section class="systems-section" id="systems">
+  <p class="systems-label">Design Systems Work</p>
+  <p class="systems-sub">Design systems aren't deliverables — they're the infrastructure that determines whether a product stays coherent as it scales. Here's how I approach them.</p>
+  <div class="systems-grid">
+    <div class="sys-card">
+      <p class="sys-card-label pink">Native UI Systems</p>
+      <h3 class="sys-card-title">Android & iOS Component Libraries</h3>
+      <p class="sys-card-body">Built native design systems for government apps — covering component behaviour, accessibility states, touch targets, and BITV compliance across both platforms. Used by a 64-person team.</p>
+    </div>
+    <div class="sys-card">
+      <p class="sys-card-label cyan">AI Interface Patterns</p>
+      <h3 class="sys-card-title">AI Interaction & Explainability Patterns</h3>
+      <p class="sys-card-body">Design patterns for AI-powered interfaces — including explainability components, uncertainty indicators, human override flows, and trust-building interaction sequences for regulated environments.</p>
+    </div>
+    <div class="sys-card">
+      <p class="sys-card-label yellow">Accessibility Systems</p>
+      <h3 class="sys-card-title">BITV/WCAG-Compliant Design Frameworks</h3>
+      <p class="sys-card-body">Designing accessibility in from the foundation rather than auditing it in at the end — semantic structure, colour contrast systems, keyboard navigation patterns, and screen reader-compatible component libraries.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip stripe">
+  <h2 class="cta-text">Want the full<br><span>story?</span></h2>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+    <a href="case-studies.html" class="btn btn-ink">Deep dive case studies →</a>
+    <a href="about.html" class="btn" style="background:rgba(17,17,17,0.08);color:var(--ink);border:1.5px solid rgba(17,17,17,0.2);">About me →</a>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="footer-logo">Jennifer Simonds-Spellmann</a>
+  <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="footer-link">LinkedIn ↗</a>
+</footer>
+
+<script>
+const h = document.getElementById("hamburger");
+const m = document.getElementById("mobileNav");
+
+if (h && m) {
+  const closeMenu = () => {
+    h.classList.remove("open");
+    m.classList.remove("open");
+    h.setAttribute("aria-expanded", "false");
+  };
+
+  const toggleMenu = () => {
+    const isOpen = h.classList.toggle("open");
+    m.classList.toggle("open", isOpen);
+    h.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  h.addEventListener("click", toggleMenu);
+  m.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) closeMenu();
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+}
+</script>
+</body>
+</html>
