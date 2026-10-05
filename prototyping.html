@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="/favron32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favron16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototyping &amp; Vibe Coding — Case studies — Jennifer Simonds-Spellmann</title>
+<meta name="description" content="Hands-on, AI-assisted prototyping case studies: EquitAI, AI compliance guidance, and aiadoption.design — working demos built fast enough to test ideas with real people.">
+<meta property="og:title" content="Prototyping &amp; Vibe Coding — Case studies — Jennifer Simonds-Spellmann">
+<meta property="og:description" content="Hands-on, AI-assisted prototyping: working demos and tools built fast enough to test ideas with real people.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jennifersimonds.com/prototyping">
+<link rel="canonical" href="https://jennifersimonds.com/prototyping">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --yellow: #FFD93D; --yellow-deep: #F5C800; --pink: #FF3DA0; --pink-dark: #CC1F7A;
+  --cyan: #00C4D4; --ink: #111111; --white: #FFFFFF; --off-white: #FAFAF7;
+  --stripe-color: rgba(0,0,0,0.055);
+  --bebas: 'Bebas Neue', Impact, sans-serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --mono: 'Space Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.stripe {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--stripe-color) 0px,
+    var(--stripe-color) 2px,
+    transparent 2px,
+    transparent 12px
+  );
+}
+
+nav {
+  position: sticky; top: 0; z-index: 100; background: var(--ink);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem; height: 60px;
+}
+.nav-logo {
+  font-family: var(--bebas); font-weight: 400; font-size: 1.25rem;
+  letter-spacing: 0.06em; color: var(--yellow); text-decoration: none;
+}
+.nav-links { display: flex; list-style: none; }
+.nav-links a {
+  display: block; padding: 0 1.25rem; height: 60px; line-height: 60px;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.80); text-decoration: none; transition: color 0.15s;
+  border-left: 0.5px solid rgba(255,255,255,0.08);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--yellow); }
+.nav-links a:focus-visible, a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--pink); outline-offset: 3px;
+}
+
+footer {
+  background: var(--ink); padding: 2rem 2.5rem;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+}
+.footer-logo {
+  font-family: var(--bebas); font-weight: 400; font-size: 1.15rem;
+  letter-spacing: 0.06em; color: var(--yellow); text-decoration: none;
+}
+.footer-copy {
+  font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.75); text-transform: uppercase;
+}
+.footer-link {
+  font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--pink); text-decoration: none;
+}
+.footer-link:hover { color: var(--yellow); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 200; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--yellow); transition: all 0.25s; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav {
+  display: none; position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
+  background: var(--ink); z-index: 99; flex-direction: column; padding: 2.5rem; overflow-y: auto;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.80); text-decoration: none; padding: 1rem 0;
+  border-bottom: 0.5px solid rgba(255,255,255,0.08);
+}
+.mobile-nav a:hover { color: var(--yellow); }
+
+/* PAGE */
+.page-wrap { padding: 2.5rem 2.5rem 0; }
+
+.back-link {
+  display: inline-block; font-family: var(--mono); font-size: 0.68rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: rgba(17,17,17,0.7);
+  text-decoration: none; margin-bottom: 1.75rem;
+}
+.back-link:hover { color: var(--ink); }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: var(--ink); color: var(--yellow);
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.4rem 0.85rem; margin-bottom: 1.5rem;
+}
+
+.page-title {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: clamp(4rem, 11vw, 8.5rem); line-height: 0.9; letter-spacing: 0.01em;
+  color: var(--ink); margin-bottom: 1.5rem;
+}
+.page-title .hl-pink { color: var(--pink); }
+
+.page-intro {
+  max-width: 44rem; font-size: 1.05rem; font-weight: 300; line-height: 1.75;
+  color: rgba(17,17,17,0.85); margin-bottom: 2rem;
+}
+
+/* FILTERS */
+.filter-row {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem;
+  padding-bottom: 2rem; border-bottom: 3px solid var(--ink);
+}
+.filter-btn {
+  display: inline-flex; align-items: center; padding: 0.55rem 0.9rem;
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  color: var(--ink); background: var(--white); border: 2px solid var(--ink);
+  transition: background 0.15s, color 0.15s;
+}
+.filter-btn:hover { background: var(--ink); color: var(--yellow); }
+.filter-btn[aria-current="page"] {
+  background: var(--ink); color: var(--yellow); pointer-events: none;
+}
+
+/* PROJECT LIST */
+.project-list { list-style: none; margin: 0; padding: 0 0 1rem; }
+.project-item {
+  display: grid; grid-template-columns: 5.5rem 1fr minmax(240px, 38%);
+  gap: 2rem; align-items: start; padding: 2.75rem 0;
+  border-bottom: 3px solid var(--ink);
+}
+.project-item.no-image { grid-template-columns: 5.5rem minmax(0, 52rem); }
+.project-item { scroll-margin-top: 80px; }
+.project-num {
+  font-family: var(--bebas); font-weight: 400; font-size: clamp(4.5rem, 10vw, 7rem);
+  line-height: 0.85; letter-spacing: 0.02em; color: var(--pink);
+  -webkit-text-stroke: 1.5px var(--ink); paint-order: stroke fill;
+}
+.project-kind {
+  font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(17,17,17,0.55); margin-bottom: 0.65rem;
+}
+.project-title {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.1rem); letter-spacing: 0.03em; line-height: 1;
+  text-transform: uppercase; color: var(--ink); margin-bottom: 1rem;
+}
+.project-lead {
+  font-size: 1rem; font-weight: 300; line-height: 1.75;
+  color: rgba(17,17,17,0.85); max-width: 48rem; margin-bottom: 1.5rem;
+}
+
+.def-list { display: flex; flex-direction: column; gap: 0; margin: 0 0 1.5rem; max-width: 48rem; }
+.def-row {
+  display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem;
+  padding: 0.85rem 0; border-top: 1.5px solid rgba(17,17,17,0.15);
+}
+.def-row:last-child { border-bottom: 1.5px solid rgba(17,17,17,0.15); }
+.def-row dt {
+  font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(17,17,17,0.55); padding-top: 0.15rem;
+}
+.def-row dd { font-size: 0.95rem; font-weight: 300; line-height: 1.65; color: rgba(17,17,17,0.85); margin: 0; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.25rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.75rem 1.4rem; font-family: var(--mono); font-size: 0.68rem;
+  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; transition: all 0.15s; border: 2px solid var(--ink);
+}
+.btn-solid { background: var(--ink); color: var(--yellow); }
+.btn-solid:hover { background: #333; }
+.btn-outline { background: transparent; color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--yellow); }
+
+/* IMAGE */
+.project-media { margin: 0; }
+.project-media img {
+  display: block; width: 100%; height: auto;
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  background: var(--white);
+}
+.project-media figcaption {
+  margin-top: 0.85rem; font-family: var(--mono); font-size: 0.6rem;
+  letter-spacing: 0.08em; line-height: 1.5; color: rgba(17,17,17,0.6);
+}
+
+/* INSIGHT CARD */
+.insight-card {
+  background: var(--ink); color: var(--yellow);
+  border-left: 8px solid var(--pink);
+  padding: 1.35rem 1.5rem; margin: 0 0 1.5rem; max-width: 48rem;
+}
+.insight-label {
+  font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--pink); margin-bottom: 0.65rem;
+}
+.insight-card p {
+  font-size: 0.95rem; font-weight: 300; line-height: 1.7; color: var(--yellow);
+}
+
+/* CLOSING PROJECT */
+.closing-copy { max-width: 52rem; }
+.closing-copy p {
+  font-size: 1.05rem; font-weight: 300; line-height: 1.75;
+  color: rgba(17,17,17,0.85); margin-bottom: 1.1rem;
+}
+
+.process-strip {
+  list-style: none; display: flex; flex-wrap: wrap; align-items: center;
+  gap: 0.45rem 0.55rem; margin: 1.75rem 0 1.5rem; padding: 0;
+}
+.process-strip li.box {
+  font-family: var(--mono); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--white); color: var(--ink);
+  border: 2px solid var(--ink); padding: 0.65rem 0.85rem;
+}
+.process-strip li.box.is-human { background: var(--pink); color: var(--white); border-color: var(--ink); }
+.process-strip li.arrow {
+  font-family: var(--mono); font-size: 0.85rem; color: var(--ink); list-style: none;
+}
+
+.page-end {
+  padding: 2.5rem 2.5rem 3rem;
+  display: flex; flex-wrap: wrap; gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .project-item, .project-item.no-image {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .project-num { font-size: 5rem; }
+  .def-row { grid-template-columns: 1fr; gap: 0.35rem; }
+}
+@media (max-width: 860px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-wrap, .page-end { padding-left: 1.25rem; padding-right: 1.25rem; }
+  footer { padding: 1.5rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Jennifer Simonds-Spellmann</a>
+  <ul class="nav-links">
+    <li><a href="case-studies.html" class="active">Case Studies</a></li>
+    <li><a href="workshops.html">Workshops</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a></li>
+    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="about.html">About</a>
+  <a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
+</div>
+
+<main class="page-wrap stripe">
+  <a href="case-studies.html" class="back-link">← All case studies</a>
+
+  <div class="hero-eyebrow"><span aria-hidden="true">●</span> Case studies · Focus area 05 / 05</div>
+
+  <h1 class="page-title">
+    Prototyping &amp;<br>
+    <span class="hl-pink">Vibe Coding</span>
+  </h1>
+
+  <p class="page-intro">Hands-on, AI-assisted prototyping: working demos and tools built fast enough to test ideas with real people. Not full-stack engineering, but prototyping that makes concepts real without waiting for a developer.</p>
+
+  <nav class="filter-row" aria-label="Case study focus filters">
+    <a class="filter-btn" href="case-studies.html">All</a>
+    <a class="filter-btn" href="case-studies.html">AI &amp; Innovation</a>
+    <a class="filter-btn" href="case-studies.html">Leadership</a>
+    <a class="filter-btn" href="workshops.html">Research</a>
+    <a class="filter-btn" href="case-studies.html">Systems</a>
+    <a class="filter-btn" href="prototyping.html" aria-current="page">Prototyping</a>
+  </nav>
+
+  <ol class="project-list">
+
+    <!-- 01 AI COMPLIANCE — image lives on case-studies.html#ai-compliance -->
+    <li class="project-item no-image" id="ai-compliance">
+      <div class="project-num" aria-hidden="true">01</div>
+      <div class="project-content">
+        <p class="project-kind">Interactive guidance · Responsible AI</p>
+        <h2 class="project-title">Making AI compliance usable</h2>
+        <p class="project-lead">Turning a dry, hard-to-use AI compliance policy into interactive, scenario-based guidance people can apply in their day-to-day work.</p>
+        <dl class="def-list">
+          <div class="def-row">
+            <dt>The question</dt>
+            <dd>Can people work out what to check, who decides and what to do when they're unsure, without reading the whole policy?</dd>
+          </div>
+          <div class="def-row">
+            <dt>What I built</dt>
+            <dd>Scenario-based guidance: people pick a real situation, such as summarising a document with AI, and see what to check, who decides, and what to do if they're unsure.</dd>
+          </div>
+          <div class="def-row">
+            <dt>Built with</dt>
+            <dd>Articulate Rise 360 · Scenario-based learning · UX research · Responsible AI</dd>
+          </div>
+          <div class="def-row">
+            <dt>Status</dt>
+            <dd>Anonymised recreation of a real organisational AI learning project</dd>
+          </div>
+        </dl>
+        <aside class="insight-card">
+          <p class="insight-label">From policy to practice</p>
+          <p>The design moves the learner away from memorising rules and towards making decisions in realistic situations: what to check, who decides, and what to do when they're unsure.</p>
+        </aside>
+        <div class="btn-row" style="margin-top:1.25rem;">
+          <a class="btn btn-outline" href="case-studies.html#ai-compliance">See the case study →</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- 02 EQUITAI BUILD — CV image is on case-studies; keyword image not in project -->
+    <li class="project-item no-image" id="equitai">
+      <div class="project-num" aria-hidden="true">02</div>
+      <div class="project-content">
+        <p class="project-kind">AI agent · Automation · Live tool</p>
+        <h2 class="project-title">EquitAI: how it was built</h2>
+        <p class="project-lead">An AI agent and automation prototype for CVs and job applications, starting from the recruitment barriers migrant and refugee women face.</p>
+        <dl class="def-list">
+          <div class="def-row">
+            <dt>The question</dt>
+            <dd>What should AI automate in a job application, what should it only augment, and where must the applicant stay in control?</dd>
+          </div>
+          <div class="def-row">
+            <dt>What I built</dt>
+            <dd>A live tool that helps people tailor CVs and cover letters and track applications, keeping their own voice at the centre.</dd>
+          </div>
+          <div class="def-row">
+            <dt>Built with</dt>
+            <dd>Cursor · Next.js · Vercel · Supabase · GenAI</dd>
+          </div>
+          <div class="def-row">
+            <dt>Status</dt>
+            <dd>Live experiment, started in the GRAILS 2025 programme at Elisava</dd>
+          </div>
+        </dl>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="https://aiadoption.design/work/equitai" target="_blank" rel="noopener">Read the case study ↗<span class="sr-only"> (opens in new tab)</span></a>
+          <a class="btn btn-outline" href="https://equitai.eu.com/app" target="_blank" rel="noopener">Try the tool ↗<span class="sr-only"> (opens in new tab)</span></a>
+          <a class="btn btn-outline" href="case-studies.html#equitai">Case studies entry →</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- 03 AIADOPTION.DESIGN -->
+    <li class="project-item">
+      <div class="project-num" aria-hidden="true">03</div>
+      <div class="project-content">
+        <p class="project-kind">AI-assisted development · Accessibility</p>
+        <h2 class="project-title">aiadoption.design</h2>
+        <p class="project-lead">My AI adoption portfolio, designed and built with Cursor: a multi-page site with interactive method tabs, an editorial section and case study templates.</p>
+        <dl class="def-list">
+          <div class="def-row">
+            <dt>The question</dt>
+            <dd>How far can a designer take a production-quality, accessible site with AI-assisted development?</dd>
+          </div>
+          <div class="def-row">
+            <dt>What I built</dt>
+            <dd>Keyboard-accessible tabs and navigation, light and dark modes, reduced-motion support, and content-driven pages for case studies and articles.</dd>
+          </div>
+          <div class="def-row">
+            <dt>Built with</dt>
+            <dd>Cursor</dd>
+          </div>
+          <div class="def-row">
+            <dt>Status</dt>
+            <dd>Live</dd>
+          </div>
+        </dl>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="https://aiadoption.design/" target="_blank" rel="noopener">Visit the site ↗<span class="sr-only"> (opens in new tab)</span></a>
+        </div>
+      </div>
+      <figure class="project-media">
+        <img
+          src="aiadoption-design-hero.webp"
+          alt="The aiadoption.design homepage in dark mode: the headline 'AI transformation is a human systems problem.' beside a portrait of Jenny in an arch frame with an ochre ring."
+          width="1600"
+          height="1194"
+          loading="lazy">
+        <figcaption>aiadoption.design in dark mode.</figcaption>
+      </figure>
+    </li>
+
+    <!-- 04 CLOSING -->
+    <li class="project-item no-image">
+      <div class="project-num" aria-hidden="true">04</div>
+      <div class="project-content closing-copy">
+        <h2 class="project-title">From question to something we can test</h2>
+        <p>Not every AI idea needs a business case, roadmap and six-month build before we can learn whether it works.</p>
+        <p>Sometimes the useful next step is much smaller: make enough of the idea real that people can interact with it, question it and show us what we got wrong.</p>
+
+        <ol class="process-strip" aria-label="How I prototype">
+          <li class="box">Question</li>
+          <li class="arrow" aria-hidden="true">→</li>
+          <li class="box">Prototype</li>
+          <li class="arrow" aria-hidden="true">→</li>
+          <li class="box is-human">Human</li>
+          <li class="arrow" aria-hidden="true">→</li>
+          <li class="box">Evidence</li>
+          <li class="arrow" aria-hidden="true">→</li>
+          <li class="box">Next decision</li>
+        </ol>
+
+        <p>I use rapid AI-assisted prototyping to shorten the distance between a messy question and something we can actually learn from.</p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="https://aiadoption.design/contact" target="_blank" rel="noopener">Bring me the messy AI problem →<span class="sr-only"> (opens in new tab)</span></a>
+        </div>
+      </div>
+    </li>
+
+  </ol>
+</main>
+
+<div class="page-end stripe">
+  <a class="btn btn-outline" href="index.html#focus-areas">← Back to focus areas</a>
+</div>
+
+<footer>
+  <a href="index.html" class="footer-logo">Jennifer Simonds-Spellmann</a>
+  <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
+  <span style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="footer-link">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="footer-link">EquitAI ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  </span>
+</footer>
+
+<script>
+const h = document.getElementById("hamburger");
+const m = document.getElementById("mobileNav");
+if (h && m) {
+  const closeMenu = () => {
+    h.classList.remove("open");
+    m.classList.remove("open");
+    h.setAttribute("aria-expanded", "false");
+  };
+  const toggleMenu = () => {
+    const isOpen = h.classList.toggle("open");
+    m.classList.toggle("open", isOpen);
+    h.setAttribute("aria-expanded", String(isOpen));
+  };
+  h.addEventListener("click", toggleMenu);
+  m.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) closeMenu();
+  });
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+}
+</script>
+</body>
+</html>

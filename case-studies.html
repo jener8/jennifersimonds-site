@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="/favron32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favron16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Case Studies — Jennifer Simonds-Spellmann</title>
 <meta name="description" content="In-depth case studies by Jennifer Simonds-Spellmann — EU digital driver licence UX research, i-Kfz BITV-certified government app, Ryse IoT health app, and Seeing the Algorithm AI literacy project.">
@@ -84,6 +88,47 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 .outcome-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.70); margin-bottom: 0.5rem; }
 .outcome-text { font-size: 0.875rem; font-weight: 400; color: var(--ink); line-height: 1.6; }
 
+.case-card { scroll-margin-top: 80px; }
+.case-sub { scroll-margin-top: 80px; margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1.5px solid rgba(17,17,17,0.12); }
+.case-sub-title { font-family: var(--bebas); font-weight: 400; font-size: 1.4rem; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 0.85rem; }
+.case-sub-img { margin: 1rem 0 1.25rem; }
+.case-sub-img img { display: block; width: 100%; max-width: 420px; height: auto; border: 1.5px solid rgba(17,17,17,0.15); }
+.case-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+.case-actions .btn { border: 2px solid var(--ink); }
+.btn-outline { background: transparent; color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--yellow); }
+
+.def-list { display: flex; flex-direction: column; gap: 0; margin: 0.5rem 0 0; }
+.def-row { display: grid; grid-template-columns: 8.5rem 1fr; gap: 0.75rem; padding: 0.7rem 0; border-top: 1px solid rgba(17,17,17,0.1); }
+.def-row:last-child { border-bottom: 1px solid rgba(17,17,17,0.1); }
+.def-row dt { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(17,17,17,0.55); padding-top: 0.15rem; }
+.def-row dd { font-size: 0.875rem; font-weight: 300; color: rgba(17,17,17,0.85); line-height: 1.65; margin: 0; }
+
+.insight-card { background: var(--ink); color: var(--yellow); border-left: 8px solid var(--pink); padding: 1.25rem 1.35rem; margin: 1.25rem 0 0; }
+.insight-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); margin-bottom: 0.55rem; }
+.insight-card p { font-size: 0.875rem; font-weight: 300; line-height: 1.7; color: var(--yellow); }
+
+.case-media-caption { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.45; }
+.case-img figure { margin: 0; width: 100%; height: 100%; display: flex; flex-direction: column; }
+.case-img figure img { width: 100%; flex: 1; object-fit: cover; display: block; min-height: 220px; }
+.case-img figure figcaption { padding: 0.85rem 1rem; background: var(--ink); }
+
+/* OVERVIEW MATRIX */
+.overview-wrap { margin-top: 2.5rem; overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1.5px solid rgba(255,255,255,0.2); }
+.overview-table { width: 100%; min-width: 720px; border-collapse: collapse; background: rgba(255,255,255,0.03); }
+.overview-table caption { caption-side: top; text-align: left; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); padding: 0 0 0.85rem; }
+.overview-table th, .overview-table td { border: 1px solid rgba(255,255,255,0.12); padding: 0.75rem 0.85rem; text-align: center; vertical-align: middle; }
+.overview-table th { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--yellow); font-weight: 700; background: rgba(0,0,0,0.25); }
+.overview-table th:first-child, .overview-table td:first-child { text-align: left; }
+.overview-table td:first-child a { font-family: var(--bebas); font-size: 1.05rem; letter-spacing: 0.04em; color: var(--white); text-decoration: none; }
+.overview-table td:first-child a:hover { color: var(--pink); }
+.mark-lead, .mark-also {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.1rem; height: 1.1rem; border-radius: 50%; font-size: 0;
+}
+.mark-lead { background: var(--pink); border: 2px solid var(--pink); }
+.mark-also { background: transparent; border: 2px solid rgba(255,255,255,0.65); }
+
 /* APPROACH SECTION */
 .approach-section { background: var(--yellow); padding: 4rem 2.5rem; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
 .approach-label { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; color: var(--ink); line-height: 1; margin-bottom: 0.5rem; }
@@ -107,6 +152,7 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
   .case-card:nth-child(even) .case-img, .case-card:nth-child(even) .case-content { order: unset; }
   .case-img { min-height: 180px; }
   .approach-grid { grid-template-columns: 1fr; }
+  .def-row { grid-template-columns: 1fr; gap: 0.3rem; }
   footer { padding: 1.5rem 1.25rem; }
 }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 200; }
@@ -121,6 +167,18 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 @media (max-width: 860px) {
   .hamburger { display: flex; }
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 </style>
 </head>
 <body>
@@ -128,21 +186,21 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 <nav>
   <a href="index.html" class="nav-logo">Jennifer Simonds-Spellmann</a>
   <ul class="nav-links">
-    <li><a href="work.html">Work</a></li>
     <li><a href="case-studies.html" class="active">Case Studies</a></li>
     <li><a href="workshops.html">Workshops</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a></li>
+    <li><a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a></li>
+    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <a href="index.html">Home</a>
-  <a href="work.html">Work</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="workshops.html">Workshops</a>
   <a href="about.html">About</a>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a>
+  <a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
   <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
 </div>
 
@@ -151,20 +209,113 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
   <p class="page-eyebrow">Case Studies — Product Design in Practice</p>
   <h1 class="page-title">Real Work.<br><span class="ac-pink">Real Impact.</span></h1>
   <p class="page-subtitle">A selection of product design challenges across AI, public sector digital services, health tech, and regulated technology — each with a clear problem, a process, and an outcome.</p>
+
+  <div class="overview-wrap">
+    <table class="overview-table">
+      <caption>Case studies mapped to focus areas — filled marker = lead, outlined marker = also</caption>
+      <thead>
+        <tr>
+          <th scope="col">Project</th>
+          <th scope="col">AI &amp; Innovation</th>
+          <th scope="col">Leadership</th>
+          <th scope="col">Research</th>
+          <th scope="col">Systems &amp; Accessibility</th>
+          <th scope="col">Prototyping</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#equitai">EquitAI</a></td>
+          <td><span class="mark-lead" title="Lead"><span class="sr-only">Lead</span></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="mark-also" title="Also"><span class="sr-only">Also</span></span></td>
+        </tr>
+        <tr>
+          <td><a href="#eu-digital-drivers-licence">EU Digital Driver's Licence</a></td>
+          <td></td>
+          <td></td>
+          <td><span class="mark-lead" title="Lead"><span class="sr-only">Lead</span></span></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="#i-kfz">i-Kfz</a></td>
+          <td></td>
+          <td><span class="mark-lead" title="Lead"><span class="sr-only">Lead</span></span></td>
+          <td></td>
+          <td><span class="mark-lead" title="Lead"><span class="sr-only">Lead</span></span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="#ai-compliance">AI compliance guidance</a></td>
+          <td></td>
+          <td></td>
+          <td><span class="mark-also" title="Also"><span class="sr-only">Also</span></span></td>
+          <td></td>
+          <td><span class="mark-lead" title="Lead"><span class="sr-only">Lead</span></span></td>
+        </tr>
+        <tr>
+          <td><a href="#ryse">Ryse</a></td>
+          <td><span class="mark-also" title="Also"><span class="sr-only">Also</span></span></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a href="#seeing-the-algorithm">Seeing the Algorithm</a></td>
+          <td></td>
+          <td></td>
+          <td><span class="mark-also" title="Also"><span class="sr-only">Also</span></span></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <div class="cases-grid">
 
-  <!-- Case 1: EU Digital Driver's License UX Research -->
-  <article class="case-card">
+  <!-- 01 EquitAI -->
+  <article class="case-card" id="equitai">
+    <div class="case-img dark-bg" style="padding:0;">
+      <figure>
+        <img src="equitai-cv-assistant.webp" alt="The EquitAI CV editor with the AI Career Assistant open beside a CV. The assistant explains that you highlight text and ask it to tailor, strengthen or rewrite, and that it edits the CV directly, creates a new version and explains what changed." width="1600" height="1236" loading="lazy">
+        <figcaption class="case-media-caption">The AI Career Assistant edits the CV, saves a new version and explains what changed.</figcaption>
+      </figure>
+    </div>
+    <div class="case-content">
+      <span class="case-num">01 / 06</span>
+      <span class="case-tag t-cyan">UX research · AI agents · Inclusion</span>
+      <h2 class="case-title">EquitAI</h2>
+      <p class="case-body">An AI agent and automation prototype for CVs and job applications, starting from the recruitment barriers migrant and refugee women face.</p>
+      <hr class="case-divider">
+      <dl class="def-list">
+        <div class="def-row"><dt>The question</dt><dd>What should AI automate in a job application, what should it only augment, and where must the applicant stay in control?</dd></div>
+        <div class="def-row"><dt>What I built</dt><dd>A live tool that helps people tailor CVs and cover letters and track applications, keeping their own voice at the centre.</dd></div>
+        <div class="def-row"><dt>Built with</dt><dd>Cursor · Next.js · Vercel · Supabase · GenAI</dd></div>
+        <div class="def-row"><dt>Status</dt><dd>Live experiment, started in the GRAILS 2025 programme at Elisava</dd></div>
+      </dl>
+      <div class="case-actions">
+        <a class="btn btn-ink" href="https://aiadoption.design/work/equitai" target="_blank" rel="noopener">Read the full case study ↗<span class="sr-only"> (opens in new tab)</span></a>
+        <a class="btn btn-outline" href="https://equitai.eu.com/app" target="_blank" rel="noopener">Try the tool ↗<span class="sr-only"> (opens in new tab)</span></a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 02 EU Digital Driver's Licence -->
+  <article class="case-card" id="eu-digital-drivers-licence">
     <div class="case-img" style="background:var(--ink); padding:0; position:relative; overflow:hidden;">
-      <img src="eu-persona.png" alt="User persona — disabled driver stopped by police, needing digital ID" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+      <img src="eu-persona.png" alt="User persona — disabled driver stopped by police, needing digital ID" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" loading="lazy">
       <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.75));padding:1.25rem 1.5rem;">
         <p style="font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin:0;">Research imagery — internal artefacts confidential</p>
       </div>
     </div>
     <div class="case-content">
-      <span class="case-num">01 / 04</span>
+      <span class="case-num">02 / 06</span>
       <span class="case-tag t-cyan">UX Research · Public Sector · AI</span>
       <h2 class="case-title">EU Digital Driver's Licence — UX Research</h2>
       <p class="case-hook">"Across the EU, digital ID apps are meant to be secure and convenient. But for many citizens — especially older adults — they feel confusing, opaque, or untrustworthy."</p>
@@ -172,11 +323,11 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
       <hr class="case-divider">
       <p class="what-label">Research approach</p>
       <ul class="case-list">
-        <li>User testing & usability studies to identify friction points and emotional cues in real-time interactions</li>
-        <li>Paper prototyping & narrative flows to visualise abstract systems in relatable, human form</li>
+        <li>User testing &amp; usability studies to identify friction points and emotional cues in real-time interactions</li>
+        <li>Paper prototyping &amp; narrative flows to visualise abstract systems in relatable, human form</li>
         <li>Co-creation workshops to align users, designers, engineers, and policymakers around shared needs and risks</li>
         <li>Quantitative surveys to map trust, usability, and comprehension across a diverse user base</li>
-        <li>System storytelling & visual thinking to turn invisible infrastructure into meaningful design choices</li>
+        <li>System storytelling &amp; visual thinking to turn invisible infrastructure into meaningful design choices</li>
       </ul>
       <div class="case-outcome">
         <p class="outcome-label">Outcome</p>
@@ -185,24 +336,23 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
     </div>
   </article>
 
-  <!-- Case 2: Digital Driver's Licence App — UI/UX -->
-  <article class="case-card">
-    <div class="case-img" style="background:#0e1a2b; padding:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:2px;">
-      <img src="kfz-hero.png" alt="i-Kfz app collage with BITV badge" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;grid-column:1/3;">
-      <img src="kfz-7.png" alt="i-Kfz app in use" style="width:100%;height:160px;object-fit:cover;object-position:center top;display:block;">
-      <img src="kfz-4.png" alt="i-Kfz assistant flow" style="width:100%;height:160px;object-fit:cover;object-position:center top;display:block;">
+  <!-- 03 i-Kfz -->
+  <article class="case-card" id="i-kfz">
+    <div class="case-img" style="background:#0e1a2b; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:2px;">
+      <img src="kfz-hero.png" alt="i-Kfz app collage with BITV badge" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;grid-column:1/3;min-height:200px;" loading="lazy">
+      <img src="kfz-4.png" alt="i-Kfz assistant flow" style="width:100%;height:180px;object-fit:cover;object-position:center top;display:block;grid-column:1/3;" loading="lazy">
     </div>
     <div class="case-content">
-      <span class="case-num">02 / 04</span>
+      <span class="case-num">03 / 06</span>
       <span class="case-tag t-pink">Product Design · Design System · BITV</span>
-      <h2 class="case-title">i-Kfz: Native App for Digital Driver's Licence & Vehicle Registration</h2>
+      <h2 class="case-title">i-Kfz: Native App for Digital Driver's Licence &amp; Vehicle Registration</h2>
       <p class="case-hook">"Creating digital public services is like building a bike for everyone — one that works in a traffic jam, during a rainstorm, and with a flat tire."</p>
-      <p class="case-body">I led UX & UI design for <strong>Germany's first BITV-certified government app</strong> — secure, native Android and iOS apps for Germany's public sector. These apps supported sensitive authentication processes, complied with accessibility standards, and required sign-off across multiple government stakeholder groups. <strong>Over 1 million downloads.</strong></p>
+      <p class="case-body">I led UX &amp; UI design for <strong>Germany's first BITV-certified government app</strong> — secure, native Android and iOS apps for Germany's public sector. These apps supported sensitive authentication processes, complied with accessibility standards, and required sign-off across multiple government stakeholder groups. <strong>Over 1 million downloads.</strong></p>
       <hr class="case-divider">
       <p class="what-label">What I did</p>
       <ul class="case-list">
         <li>Concepted UX design to align user needs with business and legal constraints</li>
-        <li>Built and led a lean agile UX/UI team (scaled from 6 to 64 people)</li>
+        <li>Built a UX team from zero to six</li>
         <li>Low and high-fidelity prototypes of a digital assistant to simplify complex registration steps</li>
         <li>Lean Agile sprints and user testing to deliver practical, adaptable solutions</li>
         <li>Developed personas and localisation strategies for multilingual, cross-cultural contexts</li>
@@ -213,17 +363,56 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
         <p class="outcome-label">Outcome</p>
         <p class="outcome-text">Public sector apps that were secure, accessible, intuitive, and ready for national scale — Germany's first BITV-certified government app with 1M+ downloads.</p>
       </div>
+
+      <section class="case-sub" id="i-kfz-team" aria-labelledby="i-kfz-team-title">
+        <h3 class="case-sub-title" id="i-kfz-team-title">The team behind it</h3>
+        <div class="case-sub-img">
+          <img src="kfz-7.png" alt="The i-Kfz app in use" loading="lazy">
+        </div>
+        <ul class="case-list">
+          <li>Built a UX team from zero to six</li>
+          <li>Lean Agile sprints and user testing</li>
+          <li>Built a native UI design system used across the product suite</li>
+        </ul>
+      </section>
     </div>
   </article>
 
-  <!-- Case 3: Ryse Health App -->
-  <article class="case-card">
-    <div class="case-img" style="background:#0d1520; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:2px;">
-      <img src="ryse-1.jpeg" alt="Ryse app home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
-      <img src="ryse-4.jpeg" alt="Ryse session length" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+  <!-- 04 AI compliance -->
+  <article class="case-card" id="ai-compliance">
+    <div class="case-img dark-bg" style="padding:0;">
+      <figure>
+        <img src="ai-compliance-guidance.webp" alt="AI compliance guidance on a laptop. The user chooses the situation 'Summarise a text with AI' and sees what to check, who decides, and three steps if unsure: stop, check, ask. Callouts label the real-world scenario, clear guidance, human checkpoint and practical next steps." width="1536" height="1024" loading="lazy">
+        <figcaption class="case-media-caption">Recreated example screen, anonymised and adapted from a real e-learning project.</figcaption>
+      </figure>
     </div>
     <div class="case-content">
-      <span class="case-num">03 / 04</span>
+      <span class="case-num">04 / 06</span>
+      <span class="case-tag t-yellow">Responsible AI · Learning design · Prototyping</span>
+      <h2 class="case-title">AI compliance guidance</h2>
+      <p class="case-body">Turning a dry, hard-to-use AI compliance policy into interactive, scenario-based guidance people can apply in their day-to-day work.</p>
+      <hr class="case-divider">
+      <dl class="def-list">
+        <div class="def-row"><dt>The question</dt><dd>Can people work out what to check, who decides and what to do when they're unsure, without reading the whole policy?</dd></div>
+        <div class="def-row"><dt>What I built</dt><dd>Scenario-based guidance: people pick a real situation, such as summarising a document with AI, and see what to check, who decides, and what to do if they're unsure.</dd></div>
+        <div class="def-row"><dt>Built with</dt><dd>Articulate Rise 360 · Scenario-based learning · UX research · Responsible AI</dd></div>
+        <div class="def-row"><dt>Status</dt><dd>Anonymised recreation of a real organisational AI learning project</dd></div>
+      </dl>
+      <aside class="insight-card">
+        <p class="insight-label">From policy to practice</p>
+        <p>The design moves the learner away from memorising rules and towards making decisions in realistic situations: what to check, who decides, and what to do when they're unsure.</p>
+      </aside>
+    </div>
+  </article>
+
+  <!-- 05 Ryse -->
+  <article class="case-card" id="ryse">
+    <div class="case-img" style="background:#0d1520; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:2px;">
+      <img src="ryse-1.jpeg" alt="Ryse app home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" loading="lazy">
+      <img src="ryse-4.jpeg" alt="Ryse session length" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" loading="lazy">
+    </div>
+    <div class="case-content">
+      <span class="case-num">05 / 06</span>
       <span class="case-tag t-yellow">Health Tech · IoT · B2C</span>
       <h2 class="case-title">Ryse — Health App with IoT-Connected Interactions</h2>
       <p class="case-hook">"Creating a UX strategy for a health app is like prescribing the right medicine — without a plan, you're just handing out sugar pills."</p>
@@ -244,16 +433,16 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
     </div>
   </article>
 
-  <!-- Case 4: Seeing the Algorithm -->
-  <article class="case-card">
+  <!-- 06 Seeing the Algorithm -->
+  <article class="case-card" id="seeing-the-algorithm">
     <div class="case-img" style="background: var(--ink); padding:0; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:2px;">
-      <img src="algo-bubble-draw.jpg" alt="Child's drawing of algorithm as bubble" style="width:100%;height:100%;object-fit:cover;display:block;">
-      <img src="algo-bubble-ai.png" alt="AI interpretation of child's bubble drawing" style="width:100%;height:100%;object-fit:cover;display:block;">
-      <img src="algo-eyes-draw.png" alt="Child's drawing of algorithm as surveillance" style="width:100%;height:100%;object-fit:cover;display:block;">
-      <img src="algo-eyes-ai.png" alt="AI interpretation of surveillance drawing" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="algo-bubble-draw.jpg" alt="Child's drawing of algorithm as bubble" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+      <img src="algo-bubble-ai.png" alt="AI interpretation of child's bubble drawing" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+      <img src="algo-eyes-draw.png" alt="Child's drawing of algorithm as surveillance" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+      <img src="algo-eyes-ai.png" alt="AI interpretation of surveillance drawing" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
     </div>
     <div class="case-content">
-      <span class="case-num">04 / 04</span>
+      <span class="case-num">06 / 06</span>
       <span class="case-tag t-ink">Research · AI Literacy · Participatory Design</span>
       <h2 class="case-title">Seeing the Algorithm — AI Literacy Through Drawing</h2>
       <p class="case-hook">"Participants learn that algorithms are not neutral or automatic, but human-made and programmable."</p>
@@ -318,7 +507,11 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 <footer>
   <a href="index.html" class="footer-logo">Jennifer Simonds-Spellmann</a>
   <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="footer-link">LinkedIn ↗</a>
+  <span style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="footer-link">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="footer-link">EquitAI ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  </span>
 </footer>
 
 <script>

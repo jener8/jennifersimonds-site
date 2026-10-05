@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="/favron32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favron16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About — Jennifer Simonds-Spellmann</title>
-<meta name="description" content="Jennifer Simonds-Spellmann is a Senior Product Designer based in Berlin with dual British-German citizenship. 10+ years in AI, government digital services and accessibility. MA in Design for Responsible AI.">
+<meta name="description" content="Jennifer Simonds-Spellmann works at the intersection of human-centred AI, product design, governance and accessibility in Berlin. MA in Design for Responsible AI.">
 <meta property="og:title" content="About — Jennifer Simonds-Spellmann">
-<meta property="og:description" content="Senior Product Designer in Berlin. MA in Design for Responsible AI. Dual British-German citizen.">
+<meta property="og:description" content="Human-centred AI, product design, governance and accessibility. Berlin. MA in Design for Responsible AI.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jennifersimonds.com/about">
 <link rel="canonical" href="https://jennifersimonds.com/about">
@@ -55,12 +59,59 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 .flag-pill { font-family: var(--mono); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.75rem; border: 1.5px solid var(--ink); background: var(--ink); color: var(--yellow); }
 
 /* BIO SECTION */
-.bio-section { padding: 4rem 2.5rem; background: var(--white); border-bottom: 1.5px solid rgba(17,17,17,0.08); }
-.bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-.bio-col h2 { font-family: var(--bebas); font-weight: 400; font-size: 1.75rem; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 1.25rem; }
-.bio-col h2 span { color: var(--pink); }
-.bio-p { font-size: 0.95rem; font-weight: 300; color: rgba(17,17,17,0.7); line-height: 1.9; margin-bottom: 1rem; }
+.bio-section { padding: 4.5rem 2.5rem 5rem; background: var(--white); border-bottom: 1.5px solid rgba(17,17,17,0.08); }
+.bio-stack { max-width: 40rem; }
+.bio-block { margin-bottom: 3.5rem; }
+.bio-block:last-of-type { margin-bottom: 0; }
+.bio-block h2 {
+  font-family: var(--bebas); font-weight: 400;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+.bio-block h2 span { color: var(--pink); }
+.bio-p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(17,17,17,0.78);
+  line-height: 1.85;
+  margin-bottom: 1.15rem;
+  max-width: 58ch;
+}
+.bio-p:last-child { margin-bottom: 0; }
 .bio-p strong { color: var(--ink); font-weight: 500; }
+
+.bio-pull {
+  margin: 2rem 0 0;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border-left: 3px solid var(--pink);
+  max-width: 22ch;
+}
+.bio-pull p {
+  font-family: var(--bebas);
+  font-weight: 400;
+  font-size: clamp(1.45rem, 2.8vw, 2rem);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.bio-close {
+  margin-top: 4rem;
+  padding: 2.25rem 2rem;
+  background: var(--ink);
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--yellow);
+  font-family: var(--bebas);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  color: var(--yellow);
+  max-width: 28ch;
+}
 
 /* TIMELINE */
 .timeline-section { background: var(--ink); padding: 4rem 2.5rem; border-bottom: 3px solid var(--ink); }
@@ -108,7 +159,8 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
   .intro-img { min-height: 220px; }
   .intro-content { padding: 2.5rem 1.25rem; }
   .bio-section, .timeline-section, .caps-section, .contact-section { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .bio-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .bio-block { margin-bottom: 2.75rem; }
+  .bio-close { margin-top: 3rem; padding: 1.75rem 1.5rem; box-shadow: 4px 4px 0 var(--yellow); }
   .timeline::before { left: 5rem; }
   .tl-item { grid-template-columns: 5rem 1fr; }
   .tl-dot { left: calc(5rem - 5px); }
@@ -129,6 +181,18 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 @media (max-width: 860px) {
   .hamburger { display: flex; }
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 </style>
 </head>
 <body>
@@ -136,21 +200,21 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 <nav>
   <a href="index.html" class="nav-logo">Jennifer Simonds-Spellmann</a>
   <ul class="nav-links">
-    <li><a href="work.html">Work</a></li>
     <li><a href="case-studies.html">Case Studies</a></li>
     <li><a href="workshops.html">Workshops</a></li>
     <li><a href="about.html" class="active">About</a></li>
-    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a></li>
+    <li><a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a></li>
+    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <a href="index.html">Home</a>
-  <a href="work.html">Work</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="workshops.html">Workshops</a>
   <a href="about.html">About</a>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a>
+  <a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
   <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
 </div>
 
@@ -160,9 +224,9 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
     <img src="jennifer_2_2x.png" alt="Jennifer Simonds-Spellmann" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;">
   </div>
   <div class="intro-content">
-    <p class="intro-eyebrow">Senior Product Designer · Berlin, DE</p>
+    <p class="intro-eyebrow">Human-Centred AI · Product Design · Berlin</p>
     <h1 class="intro-name">Jennifer<br>Simonds-<br>Spellmann</h1>
-    <p class="intro-tagline">I lead product design for <strong>complex systems</strong> — the kind where the stakes are high, the users are diverse, and the technical constraints are real. For over a decade, I've worked at the intersection of <strong>AI, government digital services, and accessibility</strong> in Germany and the UK.</p>
+    <p class="intro-tagline">I work at the intersection of <strong>AI, product design, governance and human behaviour</strong> — helping organisations turn AI from something technically possible into something people can actually use, understand and trust.</p>
     <div class="intro-flags">
       <span class="flag-pill">🇬🇧 English — Fluent</span>
       <span class="flag-pill">🇩🇪 German — Fluent</span>
@@ -172,20 +236,36 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 </section>
 
 <!-- BIO -->
-<section class="bio-section">
-  <div class="bio-grid">
-    <div class="bio-col">
+<section class="bio-section" aria-label="About">
+  <div class="bio-stack">
+
+    <article class="bio-block">
       <h2>Where I'm <span>Coming From</span></h2>
-      <p class="bio-p">I started in fine arts in England — then pivoted into visual effects in London, including early work on the <strong>Harry Potter films</strong>. I moved to Berlin in 2002, and spent the next two decades building digital products here.</p>
-      <p class="bio-p">Over time my work shifted from visual craft to systemic thinking — from making things look right to making complex systems work for the people who depend on them. Government digital services gave me the training ground: high stakes, real users, zero margin for error.</p>
-      <p class="bio-p">I completed an <strong>MA in Design for Responsible AI</strong>, which sharpened my understanding of the structural risks in AI-driven products and gave me a research framework for the work I do today.</p>
-    </div>
-    <div class="bio-col">
+      <p class="bio-p">I started in fine arts in England, moved into visual effects in London — including early work on the <strong>Harry Potter films</strong> — and then into digital product design after moving to Berlin in 2002.</p>
+      <p class="bio-p">That journey took me from <strong>crafting what people see to designing how complex systems behave</strong>.</p>
+      <p class="bio-p">For much of my career, I've worked where technology meets real-world complexity: government services, regulated products, accessibility and, increasingly, AI. These are environments where a design decision isn't just about whether something feels intuitive. It can determine whether someone understands a decision, completes an essential task, trusts a system — or gets excluded by it.</p>
+      <p class="bio-p">My <strong>MA in Design for Responsible AI</strong> brought these threads together. It gave me a deeper research and governance framework for a question that now sits at the centre of my work:</p>
+      <blockquote class="bio-pull"><p>How do we make increasingly intelligent systems work well for humans?</p></blockquote>
+    </article>
+
+    <article class="bio-block">
+      <h2>What I Do <span>Now</span></h2>
+      <p class="bio-p">Today I work at the intersection of <strong>AI, product design, governance and human behaviour</strong>.</p>
+      <p class="bio-p">I help organisations turn AI from something technically possible into something people can actually use, understand and trust.</p>
+      <p class="bio-p">That can mean designing human checkpoints into an AI workflow, translating governance requirements into practical guidance, creating AI literacy programmes, prototyping AI agents and tools, or working with teams to understand where automation should — and shouldn't — take over.</p>
+      <p class="bio-p">I don't see responsible AI as a compliance layer added at the end. I see it as a <strong>design problem</strong>: deciding where humans need visibility, control, explanation and the ability to intervene.</p>
+    </article>
+
+    <article class="bio-block">
       <h2>What I'm <span>Good At</span></h2>
-      <p class="bio-p">I'm at my best in products where <strong>design decisions have real consequences</strong> — healthcare apps, public digital services, AI systems that affect vulnerable populations. I understand both the design and the governance layer, which is still a genuinely rare combination.</p>
-      <p class="bio-p">My signature achievement is leading <strong>Germany's first BITV-certified government app</strong> (i-Kfz) with over a million downloads — scaling the team from 6 to 64 people while keeping the product coherent, accessible, and approvable.</p>
-      <p class="bio-p">I also facilitate. I design and run workshops that move teams from blockers to breakthroughs — for cross-border government projects, health tech startups, and everything in between. I work in English and German equally.</p>
-    </div>
+      <p class="bio-p">I'm at my best when the problem is <strong>complex, ambiguous and consequential</strong>.</p>
+      <p class="bio-p">My background in public digital services taught me how to work with competing user, technical, accessibility and regulatory requirements. I led UX work on <strong>i-Kfz</strong>, including building a UX team from zero to six and helping deliver an accessible government service used at national scale.</p>
+      <p class="bio-p">I'm also a facilitator. I design and run workshops that help multidisciplinary teams move from uncertainty to decisions — whether that's defining an AI use case, uncovering adoption barriers, working through governance questions or turning a complicated system into something people can actually use.</p>
+      <p class="bio-p">I work fluently across <strong>design, research, strategy and AI governance</strong>, and in both <strong>English and German</strong>.</p>
+    </article>
+
+    <p class="bio-close">Technology is getting more autonomous. My work is making sure humans don't disappear from the system.</p>
+
   </div>
 </section>
 
@@ -215,9 +295,9 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
       <p class="tl-year">2015–<br>2022</p>
       <div class="tl-dot cyan"></div>
       <div class="tl-content">
-        <p class="tl-role">Lead UX/UI Designer</p>
+        <p class="tl-role">Senior UX/UI Designer</p>
         <p class="tl-org">German Public Sector Digital Services · Berlin</p>
-        <p class="tl-desc">Scaled the design team from 6 to 64 people. Led Germany's first BITV-certified government app (i-Kfz), achieving 1M+ downloads. Built native design systems for Android and iOS across regulated, multi-stakeholder environments.</p>
+        <p class="tl-desc">Built a UX team from zero to six. Led Germany's first BITV-certified government app (i-Kfz), achieving 1M+ downloads. Built native design systems for Android and iOS across regulated, multi-stakeholder environments.</p>
       </div>
     </div>
     <div class="tl-item">
@@ -274,7 +354,7 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
   <h2 class="contact-label">Let's Work<br><span>Together.</span></h2>
   <p class="contact-body">I'm available for product design contracts, AI design consultancy, and workshop facilitation — in English and German, on-site in Berlin or remote across Europe.</p>
   <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="btn btn-ink">Connect on LinkedIn →</a>
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="btn btn-ink">Connect on LinkedIn →<span class="sr-only"> (opens in new tab)</span></a>
     <a href="case-studies.html" class="btn" style="background:rgba(255,255,255,0.12);color:var(--white);border:1.5px solid rgba(255,255,255,0.3);">See my work →</a>
   </div>
   <div class="contact-meta">
@@ -288,7 +368,11 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 <footer>
   <a href="index.html" class="footer-logo">Jennifer Simonds-Spellmann</a>
   <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="footer-link">LinkedIn ↗</a>
+  <span style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="footer-link">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="footer-link">EquitAI ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  </span>
 </footer>
 
 <script>

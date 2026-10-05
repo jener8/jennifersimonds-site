@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="/favron32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favron16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Workshops — Jennifer Simonds-Spellmann</title>
 <meta name="description" content="Innovation facilitation and UX workshops by Jennifer Simonds-Spellmann — EU Commission cross-border digital services, health startup product discovery, design thinking sprints in English and German.">
@@ -52,8 +56,8 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 .formats-section { background: var(--ink); padding: 4rem 2.5rem; }
 .section-label { font-family: var(--bebas); font-weight: 400; font-size: 2.2rem; letter-spacing: 0.04em; line-height: 1; margin-bottom: 2.5rem; }
 .section-label.yellow { color: var(--yellow); }
-.formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.format-card { background: rgba(255,255,255,0.04); border: 1.5px solid rgba(255,255,255,0.1); padding: 2rem 1.75rem; position: relative; overflow: hidden; }
+.formats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.format-card { background: rgba(255,255,255,0.04); border: 1.5px solid rgba(255,255,255,0.1); padding: 2rem 1.75rem; position: relative; overflow: hidden; display: flex; flex-direction: column; }
 .format-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
 .format-card.c-pink::before { background: var(--pink); }
 .format-card.c-cyan::before { background: var(--cyan); }
@@ -65,6 +69,11 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 .format-title { font-family: var(--bebas); font-weight: 400; font-size: 1.5rem; letter-spacing: 0.03em; color: var(--white); margin-bottom: 0.75rem; }
 .format-body { font-size: 0.875rem; font-weight: 300; color: rgba(255,255,255,0.80); line-height: 1.8; }
 .format-meta { margin-top: 1.25rem; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+.format-link { margin-top: auto; padding-top: 1.25rem; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--yellow); text-decoration: none; transition: color 0.15s; }
+.format-card.c-pink .format-link { color: var(--pink); }
+.format-card.c-cyan .format-link { color: var(--cyan); }
+.format-card.c-yellow .format-link { color: var(--yellow); }
+.format-link:hover { color: var(--white); }
 
 /* CASE STUDIES */
 .workshop-cases { padding: 4rem 2.5rem; background: var(--off-white); }
@@ -87,29 +96,42 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 .wcase-outcome { background: var(--yellow); padding: 1.25rem 1.5rem; margin-top: 0.5rem; border-left: 3px solid var(--ink); }
 .wcase-outcome-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.75); margin-bottom: 0.4rem; }
 .wcase-outcome-text { font-size: 0.9rem; font-weight: 400; color: var(--ink); line-height: 1.6; }
+.wcase-link { display: inline-block; margin-top: 0.5rem; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink); text-decoration: none; transition: color 0.15s; }
+.wcase-link:hover { color: var(--ink); }
+.wcase-tag.t-yellow { background: var(--yellow); color: var(--ink); }
 
 /* METHODS */
 .methods-section { background: var(--pink); padding: 4rem 2.5rem; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
 .methods-label { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; color: var(--white); margin-bottom: 0.5rem; }
 .methods-sub { font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.7); max-width: 40rem; margin-bottom: 2.5rem; line-height: 1.75; }
-.methods-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(255,255,255,0.2); }
-.method-item { background: var(--pink); padding: 1.75rem 1.5rem; }
-.method-name { font-family: var(--bebas); font-weight: 400; font-size: 1.3rem; letter-spacing: 0.04em; color: var(--white); margin-bottom: 0.5rem; }
-.method-desc { font-size: 0.85rem; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.75; }
+.methods-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.2); }
+.method-item { background: var(--pink); padding: 1.25rem 1.25rem; }
+.method-name { font-family: var(--bebas); font-weight: 400; font-size: 1.15rem; letter-spacing: 0.04em; color: var(--white); margin-bottom: 0; }
 
 /* CTA */
 .cta-strip { background: var(--ink); padding: 3.5rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
 .cta-text { font-family: var(--bebas); font-weight: 400; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--white); letter-spacing: 0.03em; line-height: 1; }
 .cta-text span { color: var(--yellow); }
+.cta-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+.cta-ai-link { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.15s; }
+.cta-ai-link:hover { color: var(--yellow); }
+
+@media (max-width: 1099px) and (min-width: 600px) {
+  .formats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 599px) {
+  .formats-grid { grid-template-columns: 1fr; }
+  .methods-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 @media (max-width: 860px) {
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .page-hero, .formats-section, .workshop-cases, .methods-section, .cta-strip { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .formats-grid { grid-template-columns: 1fr; }
   .workshop-case { grid-template-columns: 1fr; gap: 1.5rem; }
-  .methods-grid { grid-template-columns: 1fr; }
   footer { padding: 1.5rem 1.25rem; }
 }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 200; }
@@ -124,6 +146,18 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 @media (max-width: 860px) {
   .hamburger { display: flex; }
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 </style>
 </head>
 <body>
@@ -131,52 +165,61 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
 <nav>
   <a href="index.html" class="nav-logo">Jennifer Simonds-Spellmann</a>
   <ul class="nav-links">
-    <li><a href="work.html">Work</a></li>
     <li><a href="case-studies.html">Case Studies</a></li>
     <li><a href="workshops.html" class="active">Workshops</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a></li>
+    <li><a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a></li>
+    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <a href="index.html">Home</a>
-  <a href="work.html">Work</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="workshops.html">Workshops</a>
   <a href="about.html">About</a>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a>
+  <a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
   <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
 </div>
 
 <section class="page-hero stripe">
   <a href="index.html" class="back-link">← Back to home</a>
-  <p class="page-eyebrow">Innovation Facilitation & Workshop Design</p>
+  <p class="page-eyebrow">Innovation facilitation, workshop design &amp; AI</p>
   <h1 class="page-title">Move Teams<br><span class="ac-pink">From Stuck</span><br>to Shipped.</h1>
-  <p class="page-subtitle">I design and facilitate workshops that do actual work — aligning stakeholders, unblocking product decisions, and building shared understanding across disciplines, organisations, and borders.</p>
+  <p class="page-subtitle">I design and facilitate workshops that do actual work: aligning stakeholders, unblocking product decisions, and helping teams work out where AI genuinely fits, whether it can be trusted, and what people need to work with it.</p>
 </section>
 
-<!-- FORMATS -->
+<!-- WHAT WE CAN WORK ON -->
 <section class="formats-section">
-  <p class="section-label yellow">Workshop Formats</p>
+  <p class="section-label yellow">What We Can Work On</p>
   <div class="formats-grid">
     <div class="format-card c-pink">
       <p class="format-icon pink">01</p>
-      <h2 class="format-title">Online Facilitation</h2>
-      <p class="format-body">Miro-based collaborative sessions for distributed teams and cross-border organisations. Designed for alignment, not just attendance — with clear outcomes before anyone joins the call.</p>
-      <p class="format-meta">Remote · Miro · Distributed teams</p>
+      <h2 class="format-title">Product Discovery &amp; Alignment</h2>
+      <p class="format-body">Design thinking and discovery sprints that turn an ambitious idea into user journeys, prioritised epics and a shared product vision. For founders, product teams and mixed stakeholder groups who need to agree what to build first, and why.</p>
+      <p class="format-meta">Online (Miro) · In person · Half day to multi-day sprint</p>
     </div>
     <div class="format-card c-cyan">
       <p class="format-icon cyan">02</p>
-      <h2 class="format-title">In-Person Design Thinking</h2>
-      <p class="format-body">Hands-on sessions with technical and business stakeholders, guiding teams through creative design thinking methods to define user journeys, surface risks, and build shared product vision.</p>
-      <p class="format-meta">On-site · Full or half day · Mixed stakeholders</p>
+      <h2 class="format-title">AI Use-Case &amp; Adoption Workshops</h2>
+      <p class="format-body">Finding where AI genuinely fits into people's work, rather than where the technology could be used. We map workflows, adoption barriers and risks, then prioritise use cases worth prototyping and testing.</p>
+      <p class="format-meta">Online or in person · Teams introducing copilots, agents or automation</p>
+      <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="format-link">More on AI adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
     </div>
     <div class="format-card c-yellow">
       <p class="format-icon yellow">03</p>
-      <h2 class="format-title">Product Discovery Sprints</h2>
-      <p class="format-body">Early-stage product definition workshops that translate vision into storyboards, epics, and roadmaps. Designed to get founders, designers, developers, and investors pointing in the same direction.</p>
-      <p class="format-meta">Startup · Scale-up · Strategic pivots</p>
+      <h2 class="format-title">AI Trust Audits</h2>
+      <p class="format-body">Structured audit workshops for assessing AI systems with the people affected by them, built on the four pillars of Trust by Design: explainability, override, recoverability and accountability. For practitioners, researchers and advocacy groups.</p>
+      <p class="format-meta">Community workshops · Open-source toolkit</p>
+      <a href="https://www.trustaudit.tools/" target="_blank" rel="noopener" class="format-link">TrustAudit Tools ↗<span class="sr-only"> (opens in new tab)</span></a>
+    </div>
+    <div class="format-card c-pink">
+      <p class="format-icon pink">04</p>
+      <h2 class="format-title">AI Literacy Through Making</h2>
+      <p class="format-body">Creative workshops where participants learn that algorithms are human-made and programmable, by drawing the systems that shape their digital lives. Developed with schools as part of Seeing the Algorithm.</p>
+      <p class="format-meta">Schools · Young people · Participatory design</p>
+      <a href="case-studies.html#seeing-the-algorithm" class="format-link">Seeing the Algorithm case study →</a>
     </div>
   </div>
 </section>
@@ -188,7 +231,7 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
   <!-- Case 1: EU Commission -->
   <div class="workshop-case">
     <div class="wcase-meta">
-      <p class="wcase-num">01 / 02</p>
+      <p class="wcase-num">01 / 03</p>
       <span class="wcase-tag t-pink">EU · Public Sector · Cross-Border</span>
       <p class="wcase-big">EU<br>GOV</p>
       <p class="wcase-detail-label">Format</p>
@@ -196,10 +239,10 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
       <p class="wcase-detail-label">Stakeholders</p>
       <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">EU Commission, German Government, technical leads, UX teams</p>
       <p class="wcase-detail-label">Scope</p>
-      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Cross-border UI integration across multiple EU member states</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">UI integration across multiple EU member states</p>
     </div>
     <div>
-      <h2 class="wcase-content-title">EU Commission UX Workshops & Cross-Border Digital Services Integration</h2>
+      <h2 class="wcase-content-title">EU Commission UX Workshops &amp; Digital Services Integration</h2>
       <div style="margin-bottom:1.5rem;position:relative;overflow:hidden;max-height:280px;">
         <img src="eu-ux-workshop.png" alt="EU UX Workshops in session" style="width:100%;object-fit:cover;object-position:center;display:block;">
         <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.65));padding:1rem 1.25rem;">
@@ -213,7 +256,7 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
         <li>Shared design language and UI standards aligned across multiple EU member states</li>
         <li>User journey maps co-created with technical and policy stakeholders</li>
         <li>Clear handover documentation bridging design decisions to development</li>
-        <li>A cross-border user research framework adaptable for future EU digital services</li>
+        <li>A user research framework adaptable for future EU digital services</li>
       </ul>
       <div class="wcase-outcome">
         <p class="wcase-outcome-label">Outcome</p>
@@ -225,7 +268,7 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
   <!-- Case 2: Health Startup -->
   <div class="workshop-case">
     <div class="wcase-meta">
-      <p class="wcase-num">02 / 02</p>
+      <p class="wcase-num">02 / 03</p>
       <span class="wcase-tag t-cyan">Health Tech · Startup · Product Discovery</span>
       <p class="wcase-big">HEALTH<br>TECH</p>
       <p class="wcase-detail-label">Format</p>
@@ -233,7 +276,7 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
       <p class="wcase-detail-label">Stakeholders</p>
       <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Founders, clinical advisors, development team, investors</p>
       <p class="wcase-detail-label">Scope</p>
-      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Early-stage product definition for a cross-border health app</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Early-stage product definition for a health app</p>
     </div>
     <div>
       <h2 class="wcase-content-title">Defining the Vision for a Health Startup App</h2>
@@ -248,7 +291,7 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
       <ul class="wcase-list">
         <li>Aligned stakeholders on business goals and user experience priorities</li>
         <li>Storyboards, epics, and wireframes defining the full product journey</li>
-        <li>Cross-border personas highlighting diverse user needs across markets</li>
+        <li>Personas highlighting diverse user needs across markets</li>
         <li>A UX foundation balancing innovation, clinical feasibility, and product strategy</li>
       </ul>
       <div class="wcase-outcome">
@@ -257,52 +300,68 @@ footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-item
       </div>
     </div>
   </div>
+
+  <!-- Case 3: AI Trust Audits -->
+  <div class="workshop-case">
+    <div class="wcase-meta">
+      <p class="wcase-num">03 / 03</p>
+      <span class="wcase-tag t-yellow">AI · Responsible AI · Community</span>
+      <p class="wcase-big">AI<br>TRUST</p>
+      <p class="wcase-detail-label">Format</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Structured community audit workshops</p>
+      <p class="wcase-detail-label">Stakeholders</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Practitioners, researchers and advocacy groups</p>
+      <p class="wcase-detail-label">Scope</p>
+      <p style="font-size:0.82rem;font-weight:300;color:rgba(17,17,17,0.6);">Assessing AI systems against explainability, override, recoverability and accountability</p>
+    </div>
+    <div>
+      <h2 class="wcase-content-title">AI Trust Audits with TrustAudit Tools</h2>
+      <div style="margin-bottom:1.5rem;background:var(--yellow);border:1.5px solid rgba(17,17,17,0.12);padding:2.5rem 2rem;display:flex;flex-direction:column;gap:0.75rem;max-height:280px;justify-content:center;">
+        <p style="font-family:var(--bebas);font-weight:400;font-size:2.5rem;letter-spacing:0.04em;color:var(--ink);line-height:1;">AI Trust Audits</p>
+        <p style="font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(17,17,17,0.45);">Explainability · Override · Recoverability · Accountability</p>
+      </div>
+      <p class="wcase-body">TrustAudit Tools is an open-source community platform I created for assessing AI systems. The workshops give the people affected by an AI system a structured way to examine it: what it explains, where humans can step in, how mistakes are put right, and who is accountable.</p>
+      <a href="https://www.trustaudit.tools/" target="_blank" rel="noopener" class="wcase-link">Visit trustaudit.tools ↗<span class="sr-only"> (opens in new tab)</span></a>
+    </div>
+  </div>
 </section>
 
 <!-- METHODS -->
 <section class="methods-section stripe">
   <p class="methods-label">Workshop Methods</p>
-  <p class="methods-sub">I draw on a toolkit of proven facilitation methods — choosing the right combination based on where the team is stuck and what they need to produce.</p>
+  <p class="methods-sub">I draw on a toolkit of proven facilitation methods, choosing the right combination based on where the team is stuck and what they need to produce.</p>
   <div class="methods-grid">
-    <div class="method-item">
-      <p class="method-name">Design Thinking Sprints</p>
-      <p class="method-desc">Structured problem-solving in compressed time — from problem statement to testable concept in a day or two.</p>
-    </div>
-    <div class="method-item">
-      <p class="method-name">Co-Creation Sessions</p>
-      <p class="method-desc">Bringing users, designers, engineers, and policymakers into the same room to build shared understanding of needs and risks.</p>
-    </div>
-    <div class="method-item">
-      <p class="method-name">Stakeholder Mapping</p>
-      <p class="method-desc">Surfacing who has power, who has needs, and who's missing from the conversation — before it becomes a problem.</p>
-    </div>
-    <div class="method-item">
-      <p class="method-name">Journey Mapping</p>
-      <p class="method-desc">Making invisible user flows visible — as a shared artefact that anchors conversations between disciplines.</p>
-    </div>
-    <div class="method-item">
-      <p class="method-name">Assumption Mapping</p>
-      <p class="method-desc">Getting risky assumptions out of people's heads and onto the wall — so teams can test what matters most first.</p>
-    </div>
-    <div class="method-item">
-      <p class="method-name">Participatory Design</p>
-      <p class="method-desc">Putting the people who live with a problem in the driving seat of solving it — especially for vulnerable or underserved populations.</p>
-    </div>
+    <div class="method-item"><p class="method-name">Design Thinking Sprints</p></div>
+    <div class="method-item"><p class="method-name">Co-Creation Sessions</p></div>
+    <div class="method-item"><p class="method-name">Stakeholder Mapping</p></div>
+    <div class="method-item"><p class="method-name">Journey Mapping</p></div>
+    <div class="method-item"><p class="method-name">Assumption Mapping</p></div>
+    <div class="method-item"><p class="method-name">Participatory Design</p></div>
+    <div class="method-item"><p class="method-name">AI Use-Case Mapping</p></div>
+    <div class="method-item"><p class="method-name">Human-in-the-Loop Mapping</p></div>
+    <div class="method-item"><p class="method-name">Trust Audits</p></div>
   </div>
 </section>
 
 <section class="cta-strip stripe">
   <h2 class="cta-text">Ready to run<br><span>a workshop?</span></h2>
-  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="btn btn-ink">Get in touch →</a>
-    <a href="case-studies.html" class="btn" style="background:rgba(255,255,255,0.1);color:var(--white);border:1.5px solid rgba(255,255,255,0.3);">See case studies →</a>
+  <div class="cta-actions">
+    <div class="cta-buttons">
+      <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="btn btn-ink">Get in touch →<span class="sr-only"> (opens in new tab)</span></a>
+      <a href="case-studies.html" class="btn" style="background:rgba(255,255,255,0.1);color:var(--white);border:1.5px solid rgba(255,255,255,0.3);">See case studies →</a>
+    </div>
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="cta-ai-link">AI workshop? See aiadoption.design ↗<span class="sr-only"> (opens in new tab)</span></a>
   </div>
 </section>
 
 <footer>
   <a href="index.html" class="footer-logo">Jennifer Simonds-Spellmann</a>
   <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="footer-link">LinkedIn ↗</a>
+  <span style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="footer-link">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="footer-link">EquitAI ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  </span>
 </footer>
 
 <script>

@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta property="og:title" content="Jennifer Simonds – UX, AI & Trust Design" />
-<meta property="og:description" content="Designing trustworthy AI systems and public digital services." />
+  <meta property="og:title" content="Jennifer Simonds-Spellmann — Human–AI Systems & Product Design" />
+<meta property="og:description" content="Human–AI systems and product design in Berlin: AI product design, research, accessibility (BITV/WCAG) and AI adoption. 10+ years across government digital services and regulated technology." />
 <meta property="og:image" content="jennifer_2_2x.png" />
 <meta property="og:url" content="https://www.jennifersimonds.com/" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" type="favron 32.png" sizes="32x32" href="/favron 32">
-<link rel="icon" type="favron16.png" sizes="16x16" href="/favron16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favron32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favron16.png">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jennifer Simonds-Spellmann — Product Design Innovation</title>
-<meta name="description" content="Senior Product Designer in Berlin specialising in AI product design, end-to-end product design leadership, innovation facilitation and design systems. 10+ years across government digital services, health tech and regulated technology.">
-<meta name="keywords" content="product design, UX design, AI design, design systems, Berlin, BITV, accessibility, innovation facilitation">
-<meta property="og:title" content="Jennifer Simonds-Spellmann — Product Design Innovation">
-<meta property="og:description" content="Senior Product Designer in Berlin. AI product design, design leadership, innovation facilitation.">
+<title>Jennifer Simonds-Spellmann — Human–AI Systems & Product Design</title>
+<meta name="description" content="Human–AI systems and product design in Berlin: AI product design, research, accessibility (BITV/WCAG) and AI adoption. 10+ years across government digital services and regulated technology.">
+<meta name="keywords" content="product design, UX design, AI design, design systems, Berlin, BITV, accessibility, innovation facilitation, human-AI systems, AI adoption">
+<meta property="og:title" content="Jennifer Simonds-Spellmann — Human–AI Systems & Product Design">
+<meta property="og:description" content="Human–AI systems and product design in Berlin: AI product design, research, accessibility (BITV/WCAG) and AI adoption. 10+ years across government digital services and regulated technology.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jennifersimonds.com">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jennifer Simonds-Spellmann — Product Design Innovation">
-<meta name="twitter:description" content="Senior Product Designer in Berlin. AI product design, design leadership, innovation facilitation.">
+<meta name="twitter:title" content="Jennifer Simonds-Spellmann — Human–AI Systems & Product Design">
+<meta name="twitter:description" content="Human–AI systems and product design in Berlin: AI product design, research, accessibility (BITV/WCAG) and AI adoption. 10+ years across government digital services and regulated technology.">
 <link rel="canonical" href="https://jennifersimonds.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -357,6 +357,113 @@ nav {
 .focus-card.c-cyan:hover .focus-arrow { color: var(--cyan); }
 .focus-card.c-yellow:hover .focus-arrow { color: var(--yellow); }
 
+/* Focus Areas — compact linked boxes */
+#focus-areas .focus-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+#focus-areas .focus-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  min-height: 9rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#focus-areas .focus-card::before { display: none; }
+
+#focus-areas .focus-num {
+  margin-bottom: 0.75rem;
+}
+
+#focus-areas .focus-title {
+  font-size: clamp(1.3rem, 1.8vw, 1.75rem);
+  margin-bottom: 0;
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: break-word;
+  word-break: normal;
+  padding-right: 0.25rem;
+}
+
+#focus-areas .focus-arrow {
+  margin-top: auto;
+  align-self: flex-end;
+  display: block;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1;
+  color: rgba(255,255,255,0.70);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#focus-areas .focus-card:hover,
+#focus-areas .focus-card:focus-visible {
+  background: rgba(255,255,255,0.07);
+}
+
+#focus-areas .focus-card.c-pink:hover,
+#focus-areas .focus-card.c-pink:focus-visible { border-color: var(--pink); }
+#focus-areas .focus-card.c-cyan:hover,
+#focus-areas .focus-card.c-cyan:focus-visible { border-color: var(--cyan); }
+#focus-areas .focus-card.c-yellow:hover,
+#focus-areas .focus-card.c-yellow:focus-visible { border-color: var(--yellow); }
+
+#focus-areas .focus-card:hover .focus-arrow,
+#focus-areas .focus-card:focus-visible .focus-arrow {
+  transform: translateX(4px);
+  gap: 0;
+}
+
+#focus-areas .focus-card.c-pink:hover .focus-arrow,
+#focus-areas .focus-card.c-pink:focus-visible .focus-arrow { color: var(--pink); }
+#focus-areas .focus-card.c-cyan:hover .focus-arrow,
+#focus-areas .focus-card.c-cyan:focus-visible .focus-arrow { color: var(--cyan); }
+#focus-areas .focus-card.c-yellow:hover .focus-arrow,
+#focus-areas .focus-card.c-yellow:focus-visible .focus-arrow { color: var(--yellow); }
+
+#focus-areas .focus-card:focus {
+  outline: none;
+}
+
+#focus-areas .focus-card:focus-visible {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+#focus-areas .focus-card.c-pink:focus-visible { outline-color: var(--pink); }
+#focus-areas .focus-card.c-cyan:focus-visible { outline-color: var(--cyan); }
+#focus-areas .focus-card.c-yellow:focus-visible { outline-color: var(--yellow); }
+
+@media (max-width: 1099px) and (min-width: 600px) {
+  #focus-areas .focus-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  #focus-areas .focus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #focus-areas .focus-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #focus-areas .focus-arrow {
+    transition: color 0.2s ease;
+  }
+  #focus-areas .focus-card:hover .focus-arrow,
+  #focus-areas .focus-card:focus-visible .focus-arrow {
+    transform: none;
+  }
+}
+
 /* ── ABOUT ── */
 .about-section {
   background: var(--yellow);
@@ -619,7 +726,6 @@ footer {
   .hero-stats { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
   .hero-ctas { margin: 0 -1.25rem; padding: 2rem 1.25rem; }
   .focus-section, .about-section, .caps-section { padding: 3rem 1.25rem; }
-  .focus-grid { grid-template-columns: 1fr; gap: 1rem; }
   .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-img-frame { aspect-ratio: 4/3; }
   .caps-grid { grid-template-columns: repeat(2, 1fr); }
@@ -650,6 +756,279 @@ footer {
 @media (max-width: 860px) {
   .hamburger { display: flex; }
 }
+
+/* ── RESEARCH AND FRAMEWORKS ── */
+.hub-section {
+  background: var(--yellow);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+
+.hub-section .section-label { color: var(--ink); }
+.hub-section .section-counter { color: rgba(17,17,17,0.40); }
+
+/* Featured: User Research Portfolio */
+.hub-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+  align-items: end;
+  padding: 2rem 2.25rem;
+  margin-bottom: 1rem;
+  background: var(--ink);
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--pink);
+  text-decoration: none;
+  color: var(--white);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hub-featured:hover,
+.hub-featured:focus-visible {
+  box-shadow: 10px 10px 0 var(--pink);
+  transform: translate(-2px, -2px);
+}
+
+.hub-featured:focus {
+  outline: none;
+}
+
+.hub-featured:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 4px;
+}
+
+.hub-featured-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.75rem;
+}
+
+.hub-featured .focus-num {
+  margin-bottom: 0.65rem;
+  color: rgba(255,255,255,0.55);
+}
+
+.hub-featured-title {
+  font-family: var(--bebas);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+  color: var(--yellow);
+  margin: 0;
+  hyphens: none;
+}
+
+.hub-featured-desc {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.65;
+  margin: 0 0 1.25rem;
+  max-width: 40ch;
+}
+
+.hub-featured .hub-ext {
+  margin-top: 0;
+  padding-top: 0;
+  color: rgba(255,255,255,0.70);
+}
+
+.hub-featured:hover .hub-ext,
+.hub-featured:focus-visible .hub-ext {
+  color: var(--yellow);
+}
+
+.hub-featured:hover .hub-ext-arrow,
+.hub-featured:focus-visible .hub-ext-arrow {
+  transform: translateX(4px);
+}
+
+.hub-featured-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/* Compact grid — match Focus Areas layout */
+.hub-section .focus-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.hub-section .focus-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  min-height: 9rem;
+  height: 100%;
+  box-sizing: border-box;
+  background: rgba(17,17,17,0.05);
+  border-color: rgba(17,17,17,0.15);
+}
+
+.hub-section .focus-card::before { display: none; }
+
+.hub-section .focus-num {
+  margin-bottom: 0.75rem;
+  color: rgba(17,17,17,0.45);
+}
+
+.hub-section .focus-title {
+  font-size: clamp(1.3rem, 1.8vw, 1.75rem);
+  margin-bottom: 0;
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: break-word;
+  word-break: normal;
+  color: var(--ink);
+}
+
+.hub-section .focus-card.c-pink .focus-title  { color: var(--pink-dark); }
+.hub-section .focus-card.c-cyan .focus-title  { color: #007a85; }
+.hub-section .focus-card.c-yellow .focus-title { color: var(--ink); }
+
+.hub-section .hub-ext {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.45);
+  transition: color 0.2s ease;
+}
+
+.hub-section .hub-ext .hub-ext-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.hub-section .focus-card:hover,
+.hub-section .focus-card:focus-visible {
+  background: rgba(17,17,17,0.10);
+}
+
+.hub-section .focus-card.c-pink:hover,
+.hub-section .focus-card.c-pink:focus-visible { border-color: var(--pink-dark); }
+.hub-section .focus-card.c-cyan:hover,
+.hub-section .focus-card.c-cyan:focus-visible { border-color: #007a85; }
+.hub-section .focus-card.c-yellow:hover,
+.hub-section .focus-card.c-yellow:focus-visible { border-color: var(--ink); }
+
+.hub-section .focus-card:hover .hub-ext,
+.hub-section .focus-card:focus-visible .hub-ext { color: var(--ink); }
+.hub-section .focus-card.c-pink:hover .hub-ext,
+.hub-section .focus-card.c-pink:focus-visible .hub-ext { color: var(--pink-dark); }
+.hub-section .focus-card.c-cyan:hover .hub-ext,
+.hub-section .focus-card.c-cyan:focus-visible .hub-ext { color: #007a85; }
+
+.hub-section .focus-card:hover .hub-ext-arrow,
+.hub-section .focus-card:focus-visible .hub-ext-arrow {
+  transform: translateX(4px);
+}
+
+.hub-section .focus-card:focus {
+  outline: none;
+}
+
+.hub-section .focus-card:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.hub-section .focus-card.c-pink:focus-visible { outline-color: var(--pink-dark); }
+.hub-section .focus-card.c-cyan:focus-visible { outline-color: #007a85; }
+.hub-section .focus-card.c-yellow:focus-visible { outline-color: var(--ink); }
+
+@media (max-width: 1099px) and (min-width: 600px) {
+  .hub-section .focus-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hub-featured {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+}
+
+@media (max-width: 599px) {
+  .hub-section .focus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hub-section .focus-card:last-child {
+    grid-column: 1 / -1;
+  }
+  .hub-featured {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    padding: 1.5rem 1.25rem;
+    box-shadow: 6px 6px 0 var(--pink);
+  }
+  .hub-featured:hover,
+  .hub-featured:focus-visible {
+    box-shadow: 8px 8px 0 var(--pink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hub-featured {
+    transition: none;
+  }
+  .hub-featured:hover,
+  .hub-featured:focus-visible {
+    transform: none;
+  }
+  .hub-section .hub-ext,
+  .hub-section .hub-ext-arrow {
+    transition: color 0.2s ease;
+  }
+  .hub-section .focus-card:hover .hub-ext-arrow,
+  .hub-section .focus-card:focus-visible .hub-ext-arrow,
+  .hub-featured:hover .hub-ext-arrow,
+  .hub-featured:focus-visible .hub-ext-arrow {
+    transform: none;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hero-site-links {
+  padding: 1.25rem 2.5rem;
+  background: var(--ink);
+  margin: 0 -2.5rem;
+}
+.hero-site-links a {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--yellow);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.hero-site-links a:hover { color: var(--pink); }
+
+@media (max-width: 860px) {
+  .hero-site-links { margin: 0 -1.25rem; padding: 1.1rem 1.25rem; }
+}
 </style>
 </head>
 <body>
@@ -658,21 +1037,21 @@ footer {
 <nav>
   <a href="/" class="nav-logo">Jennifer Simonds-Spellmann</a>
   <ul class="nav-links">
-    <li><a href="work.html">Work</a></li>
     <li><a href="case-studies.html">Case Studies</a></li>
     <li><a href="workshops.html">Workshops</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a></li>
+    <li><a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a></li>
+    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <a href="index.html">Home</a>
-  <a href="work.html">Work</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="workshops.html">Workshops</a>
   <a href="about.html">About</a>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank">LinkedIn ↗</a>
+  <a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
   <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
 </div>
 
@@ -681,16 +1060,19 @@ footer {
   <div class="hero-inner">
     <div>
       <div class="hero-eyebrow">
-        <span>●</span> Product Design Innovation · Berlin
+        <span>●</span> Human–AI systems &amp; product design · Berlin
       </div>
       <h1 class="hero-headline">
-        Product<br>
-        <span class="hl-pink">Design</span><br>
-        <span class="hl-white">That</span><br>
-        Delivers.
+        <span class="sr-only">Designing human + AI systems that deliver.</span>
+        <span aria-hidden="true">
+          Designing<br>
+          <span class="hl-pink">Human + AI</span><br>
+          <span class="hl-white">Systems That</span><br>
+          Deliver.
+        </span>
       </h1>
       <p class="hero-desc">
-        End-to-end product design leadership for AI systems, regulated technology, and complex digital services — with 10+ years designing for real users including vulnerable populations, and delivering to the highest accessibility standards (BITV/WCAG).
+        Product design and research for AI systems, regulated technology and complex digital services, and for the human side of AI adoption: how people understand, trust and work with what AI does. 10+ years designing for real users, including vulnerable groups, to the highest accessibility standards (BITV/WCAG).
       </p>
     </div>
     <div class="hero-stats">
@@ -703,12 +1085,12 @@ footer {
         <div class="hero-stat-label">Users on<br>certified products</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-val">64</div>
-        <div class="hero-stat-label">Team scaled<br>from 6</div>
+        <div class="hero-stat-val">14+</div>
+        <div class="hero-stat-label">Public sector AI teams<br>in my Trust by Design research</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val">BITV</div>
-        <div class="hero-stat-label">Highest accessibility <br>criteria certified<certified</div>
+        <div class="hero-stat-label">Highest accessibility <br>criteria certified</div>
       </div>
     </div>
   </div>
@@ -720,92 +1102,101 @@ footer {
       <a href="workshops.html" class="cta-btn cta-btn-ghost">Workshops →</a>
     </div>
   </div>
+  <div class="hero-site-links">
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener">AI adoption and human–AI systems work → aiadoption.design<span class="sr-only"> (opens in new tab)</span></a>
+  </div>
 </section>
 
 <!-- FOCUS AREAS -->
-<section class="focus-section">
+<section class="focus-section" id="focus-areas">
   <div class="section-header">
     <span class="section-label yellow">Focus Areas</span>
     <span class="section-counter">— 05</span>
   </div>
   <div class="focus-grid">
 
-    <a href="case-studies.html" class="focus-card c-pink">
-      <div class="focus-num">01 / 05</div>
-      <h2 class="focus-title">AI &amp; Innovation<br>Design</h2>
-      <p class="focus-desc">From speculative future concepts to shipped AI products — trend research, design narratives, prototypes and storyboards that bring emerging opportunities to life. Grounded in real user behaviour, business feasibility, and the edge cases that matter.</p>
-      <div class="focus-arrow">View case studies <span>→</span></div>
+    <a href="case-studies.html#equitai" class="focus-card c-pink" aria-label="AI &amp; Innovation Design">
+      <div class="focus-num" aria-hidden="true">01 / 05</div>
+      <h2 class="focus-title">AI &amp; Innovation Design</h2>
+      <span class="focus-arrow" aria-hidden="true">→</span>
     </a>
 
-    <a href="work.html" class="focus-card c-cyan">
-      <div class="focus-num">02 / 05</div>
-      <h2 class="focus-title">Design Leadership<br>&amp; Team Development</h2>
-      <p class="focus-desc">Leading, mentoring and growing designers and researchers — from 6 to 64 people. Defining UX vision and strategy, driving end-to-end design quality, and embedding research, product discovery and Lean UX into agile product teams across the full lifecycle.</p>
-      <div class="focus-arrow">Selected work <span>→</span></div>
+    <a href="case-studies.html#i-kfz-team" class="focus-card c-cyan" aria-label="Design Leadership &amp; Team Development">
+      <div class="focus-num" aria-hidden="true">02 / 05</div>
+      <h2 class="focus-title">Design Leadership &amp; Team Development</h2>
+      <span class="focus-arrow" aria-hidden="true">→</span>
     </a>
 
-    <a href="workshops.html" class="focus-card c-yellow">
-      <div class="focus-num">03 / 05</div>
-      <h2 class="focus-title">Research Strategy<br>&amp; Facilitation</h2>
-      <p class="focus-desc">Driving research systematically — usability testing, co-creation workshops, pilot programmes and participatory design. Translating qualitative and quantitative insight into design decisions that improve task success, adoption and user satisfaction.</p>
-      <div class="focus-arrow">About workshops <span>→</span></div>
+    <a href="case-studies.html#eu-digital-drivers-licence" class="focus-card c-yellow" aria-label="Research Strategy &amp; Facilitation">
+      <div class="focus-num" aria-hidden="true">03 / 05</div>
+      <h2 class="focus-title">Research Strategy &amp; Facilitation</h2>
+      <span class="focus-arrow" aria-hidden="true">→</span>
     </a>
 
-    <a href="work.html#systems" class="focus-card c-pink">
-      <div class="focus-num">04 / 05</div>
-      <h2 class="focus-title">Design Systems<br>&amp; Design Ops</h2>
-      <p class="focus-desc">Building the infrastructure that keeps quality consistent at scale — accessible design systems, AI-assisted workflows, design ops processes, and close collaboration with front-end leads to maintain standards across complex platforms.</p>
-      <div class="focus-arrow">Systems work <span>→</span></div>
+    <a href="case-studies.html#i-kfz" class="focus-card c-pink" aria-label="Design Systems, Ops &amp; Accessibility">
+      <div class="focus-num" aria-hidden="true">04 / 05</div>
+      <h2 class="focus-title">Design Systems, Ops &amp; Accessibility</h2>
+      <span class="focus-arrow" aria-hidden="true">→</span>
     </a>
 
-    <a href="case-studies.html" class="focus-card c-cyan">
-      <div class="focus-num">05 / 05</div>
-      <h2 class="focus-title">Prototyping &amp;<br>Vibe Coding</h2>
-      <p class="focus-desc">AI-assisted web development for design-led prototyping — building functional demos, interactive tools and proof-of-concepts fast enough to test ideas in the browser. Not full-stack engineering; hands-on prototyping that makes concepts real without waiting for a developer.</p>
-      <div class="focus-arrow">View case studies <span>→</span></div>
+    <a href="prototyping.html" class="focus-card c-cyan" aria-label="Prototyping &amp; Vibe Coding">
+      <div class="focus-num" aria-hidden="true">05 / 05</div>
+      <h2 class="focus-title">Prototyping &amp; Vibe Coding</h2>
+      <span class="focus-arrow" aria-hidden="true">→</span>
     </a>
 
   </div>
 </section>
 
-<!-- PROJECTS HUB -->
-<section class="focus-section">
+<!-- RESEARCH AND FRAMEWORKS -->
+<section class="focus-section hub-section" id="research-frameworks">
   <div class="section-header">
-    <span class="section-label cyan">Projects</span>
-    <span class="section-counter">— 04</span>
+    <span class="section-label cyan">Research and Frameworks</span>
+    <span class="section-counter">— 06</span>
   </div>
+
+  <a href="https://simondsresearch.com/" target="_blank" rel="noopener" class="hub-featured">
+    <div class="hub-featured-left">
+      <span class="hub-featured-label">The foundation</span>
+      <div class="focus-num" aria-hidden="true">01 / 06</div>
+      <h2 class="hub-featured-title">User Research Portfolio<span class="sr-only">, simondsresearch.com</span></h2>
+    </div>
+    <div class="hub-featured-right">
+      <p class="hub-featured-desc">Studies, methods and insights from 10+ years of research with real users. The research behind all of my work.</p>
+      <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
+    </div>
+  </a>
+
   <div class="focus-grid">
 
-    <a href="https://simondsresearch.com/" target="_blank" rel="noopener" class="focus-card c-pink">
-      <div class="focus-num">01 / 04</div>
-      <h2 class="focus-title">User Research<br>Portfolio</h2>
-      <p class="focus-desc">A dedicated portfolio of user research — studies, methods and insights from 10+ years working with real users on complex digital services, AI products, and regulated technology.</p>
-      <div class="focus-arrow">Visit simondsresearch.com <span>↗</span></div>
-      <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:0.4rem;">Opens in new tab</div>
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="focus-card c-pink">
+      <div class="focus-num" aria-hidden="true">02 / 06</div>
+      <h2 class="focus-title">AI Adoption &amp; Human–AI Systems<span class="sr-only">, aiadoption.design</span></h2>
+      <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
 
-    <a href="https://www.trust-by-design.org/" target="_blank" rel="noopener" class="focus-card c-cyan">
-      <div class="focus-num">02 / 04</div>
-      <h2 class="focus-title">Frameworks for<br>AI Trust</h2>
-      <p class="focus-desc">Trust by Design — a governance and design framework for building trustworthy AI systems, covering explainability, human override, recoverability, and accountability.</p>
-      <div class="focus-arrow">Visit trust-by-design.org <span>↗</span></div>
-      <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:0.4rem;">Opens in new tab</div>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="focus-card c-cyan">
+      <div class="focus-num" aria-hidden="true">03 / 06</div>
+      <h2 class="focus-title">EquitAI: AI Agents for Job Applications<span class="sr-only">, EquitAI</span></h2>
+      <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
 
-    <a href="https://trustbridge.design/" target="_blank" rel="noopener" class="focus-card c-yellow">
-      <div class="focus-num">03 / 04</div>
-      <h2 class="focus-title">Interactions for<br>AI Trust</h2>
-      <p class="focus-desc">Trustbridge — interaction patterns and design principles for AI interfaces. Practical guidance for teams building products where transparency, control, and user agency matter.</p>
-      <div class="focus-arrow">Visit trustbridge.design <span>↗</span></div>
-      <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:0.4rem;">Opens in new tab</div>
+    <a href="https://www.trust-by-design.org/" target="_blank" rel="noopener" class="focus-card c-pink">
+      <div class="focus-num" aria-hidden="true">04 / 06</div>
+      <h2 class="focus-title">Frameworks for AI Trust<span class="sr-only">, Trust by Design</span></h2>
+      <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
 
-    <a href="https://www.trustaudit.tools/" target="_blank" rel="noopener" class="focus-card c-pink">
-      <div class="focus-num">04 / 04</div>
-      <h2 class="focus-title">Community Workshops<br>for AI Trust</h2>
-      <p class="focus-desc">TrustAudit Tools — an open-source community platform for assessing AI systems. Structured audit workshops for practitioners, researchers, and advocacy groups.</p>
-      <div class="focus-arrow">Visit trustaudit.tools <span>↗</span></div>
-      <div style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:0.4rem;">Opens in new tab</div>
+    <a href="https://trustbridge.design/" target="_blank" rel="noopener" class="focus-card c-cyan">
+      <div class="focus-num" aria-hidden="true">05 / 06</div>
+      <h2 class="focus-title">Interactions for AI Trust<span class="sr-only">, TrustBridge</span></h2>
+      <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
+    </a>
+
+    <a href="https://www.trustaudit.tools/" target="_blank" rel="noopener" class="focus-card c-yellow">
+      <div class="focus-num" aria-hidden="true">06 / 06</div>
+      <h2 class="focus-title">Community Workshops for AI Trust<span class="sr-only">, TrustAudit Tools</span></h2>
+      <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
 
   </div>
@@ -855,12 +1246,12 @@ footer {
       </div>
     </div>
     <div>
-      <h2 class="about-name">Senior Design Lead.<br>Berlin-based. Dual citizen.</h2>
+      <h2 class="about-name">Senior UX &amp; AI Designer.<br>Berlin-based. Dual citizen.</h2>
       <p class="about-body">
         I lead product design for <strong>complex, high-stakes systems</strong> — defining UX vision and strategy, growing design teams, and shipping products that work for the people who depend on them most.
       </p>
       <p class="about-body">
-        10+ years across AI product design, government digital services, and regulated technology. Most recently Senior UX/AI Design Specialist at Bundesdruckerei — <strong>scaled a design team from 6 to 64</strong>, delivered Germany's first BITV-certified government app with 1M+ downloads, and led design ops, design systems, and research strategy across the organisation.
+        10+ years across AI product design, government digital services, and regulated technology. Most recently Senior UX/AI Design Specialist at Bundesdruckerei — <strong>built a UX team from zero to six</strong>, delivered Germany's first BITV-certified government app with 1M+ downloads, and led design ops, design systems, and research strategy across the organisation.
       </p>
       <p class="about-body">
         Equally comfortable with <strong>speculative innovation and future-focused concepts</strong> as with the rigour of shipping production-ready products through agile delivery. I design for the full spectrum of users — including elderly, disabled, and cognitively impaired populations — and hold certification to the <strong>highest BITV criteria</strong>. MA in Design for Responsible AI. Fluent in English and German (C2).
@@ -888,7 +1279,7 @@ footer {
       </div>
 
       <div class="about-links">
-        <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="cta-btn cta-btn-primary" style="background:var(--ink);color:var(--yellow);">Connect on LinkedIn →</a>
+        <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="cta-btn cta-btn-primary" style="background:var(--ink);color:var(--yellow);">Connect on LinkedIn →<span class="sr-only"> (opens in new tab)</span></a>
       </div>
     </div>
   </div>
@@ -901,17 +1292,17 @@ footer {
     <span class="section-counter" style="color:rgba(17,17,17,0.35);">— 12</span>
   </div>
   <div class="caps-grid">
-    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">AI Product Design</span></a>
-    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Speculative & Innovation Design</span></a>
-    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">UX Vision & Strategy</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">AI Product Design</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Speculative & Innovation Design</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">UX Vision & Strategy</span></a>
     <a href="workshops.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Research Strategy & Testing</span></a>
-    <a href="work.html#systems" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Systems & Governance</span></a>
-    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Ops & Process</span></a>
-    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Leadership & Coaching</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Systems & Governance</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Ops & Process</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Leadership & Coaching</span></a>
     <a href="workshops.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Workshop Facilitation</span></a>
-    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Concept & Prototyping</span></a>
-    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Lean UX & Agile</span></a>
-    <a href="work.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Accessibility (BITV/WCAG)</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Concept & Prototyping</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Lean UX & Agile</span></a>
+    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Accessibility (BITV/WCAG)</span></a>
     <a href="about.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Cross-functional Collaboration</span></a>
   </div>
 </section>
@@ -929,7 +1320,11 @@ footer {
 <footer>
   <a href="/" class="footer-logo">Jennifer Simonds-Spellmann</a>
   <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" class="footer-link">LinkedIn ↗</a>
+  <span style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="footer-link">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="footer-link">EquitAI ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  </span>
 </footer>
 
 <script>
