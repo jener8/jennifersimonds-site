@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta property="og:title" content="Jennifer Simonds-Spellmann — Human–AI Systems & Product Design" />
-<meta property="og:description" content="Human–AI systems and product design in Berlin: AI product design, research, accessibility (BITV/WCAG) and AI adoption. 10+ years across government digital services and regulated technology." />
+  <meta property="og:title" content="Jennifer Simonds-Spellmann — Senior UX Designer & UX Strategist" />
+<meta property="og:description" content="Senior UX Designer & UX Strategist in Berlin. Designing accessible digital products — with accessibility as a core design capability — and shaping human-centred experiences across complex systems." />
 <meta property="og:image" content="jennifer_2_2x.png" />
 <meta property="og:url" content="https://www.jennifersimonds.com/" />
 <meta property="og:type" content="website" />
@@ -13,17 +13,20 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jennifer Simonds-Spellmann — Human–AI Systems & Product Design</title>
-<meta name="description" content="Human–AI systems and product design in Berlin: AI product design, research, accessibility (BITV/WCAG) and AI adoption. 10+ years across government digital services and regulated technology.">
+<title>Jennifer Simonds-Spellmann — Senior UX Designer & UX Strategist</title>
+<meta name="description" content="Senior UX Designer & UX Strategist in Berlin. Designing accessible digital products — with accessibility as a core design capability — and shaping human-centred experiences across complex systems.">
 <meta name="keywords" content="product design, UX design, AI design, design systems, Berlin, BITV, accessibility, innovation facilitation, human-AI systems, AI adoption">
-<meta property="og:title" content="Jennifer Simonds-Spellmann — Human–AI Systems & Product Design">
-<meta property="og:description" content="Human–AI systems and product design in Berlin: AI product design, research, accessibility (BITV/WCAG) and AI adoption. 10+ years across government digital services and regulated technology.">
+<meta property="og:title" content="Jennifer Simonds-Spellmann — Senior UX Designer & UX Strategist">
+<meta property="og:description" content="Senior UX Designer & UX Strategist in Berlin. Designing accessible digital products — with accessibility as a core design capability — and shaping human-centred experiences across complex systems.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jennifersimonds.com">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jennifer Simonds-Spellmann — Human–AI Systems & Product Design">
-<meta name="twitter:description" content="Human–AI systems and product design in Berlin: AI product design, research, accessibility (BITV/WCAG) and AI adoption. 10+ years across government digital services and regulated technology.">
+<meta name="twitter:title" content="Jennifer Simonds-Spellmann — Senior UX Designer & UX Strategist">
+<meta name="twitter:description" content="Senior UX Designer & UX Strategist in Berlin. Designing accessible digital products — with accessibility as a core design capability — and shaping human-centred experiences across complex systems.">
 <link rel="canonical" href="https://jennifersimonds.com">
+<link rel="alternate" hreflang="en" href="https://jennifersimonds.com/">
+<link rel="alternate" hreflang="de" href="https://jennifersimonds.com/de/ueber-mich">
+<link rel="alternate" hreflang="x-default" href="https://jennifersimonds.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -146,10 +149,11 @@ nav {
 
 .hero-headline {
   font-family: var(--bebas); font-weight: 400;
-  font-size: clamp(5rem, 13vw, 11rem);
-  line-height: 0.9;
+  font-size: clamp(2.75rem, 6.5vw, 6.75rem);
+  line-height: 0.96;
   letter-spacing: 0.01em;
   color: var(--ink);
+  max-width: 18ch;
 }
 
 .hero-headline .hl-pink { color: var(--pink); }
@@ -159,11 +163,11 @@ nav {
 }
 
 .hero-desc {
-  margin-top: 2rem;
-  max-width: 38rem;
+  margin-top: 1.5rem;
+  max-width: 36rem;
   font-size: 1.05rem;
   font-weight: 300;
-  line-height: 1.75;
+  line-height: 1.7;
   color: rgba(17,17,17,0.85);
 }
 
@@ -705,6 +709,147 @@ footer {
 
 .footer-link:hover { color: var(--yellow); }
 
+
+/* ── FEATURED UX PROJECTS ── */
+.featured-section {
+  background: var(--white);
+  padding: 4rem 2.5rem;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+.featured-section .section-header { margin-bottom: 1rem; }
+.featured-intro {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(17,17,17,0.75);
+  max-width: 56ch;
+  margin: 0 0 2rem;
+  line-height: 1.7;
+}
+.featured-list { display: flex; flex-direction: column; gap: 0; }
+.featured-card {
+  display: grid;
+  grid-template-columns: minmax(200px, 320px) 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1.5px solid rgba(17,17,17,0.1);
+  text-decoration: none;
+  color: inherit;
+}
+.featured-card:last-child { border-bottom: none; }
+.featured-card:hover .featured-title { color: var(--pink); }
+.featured-card:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 4px;
+}
+.featured-media {
+  margin: 0;
+  background: var(--ink);
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  aspect-ratio: 4/3;
+}
+.featured-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.featured-num {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.45);
+  margin-bottom: 0.75rem;
+}
+.featured-title {
+  font-family: var(--bebas);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  transition: color 0.15s;
+}
+.featured-problem {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(17,17,17,0.8);
+  max-width: 52ch;
+  margin-bottom: 1rem;
+}
+.featured-role {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  max-width: 52ch;
+}
+.featured-role span {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.5);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.featured-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+.featured-skills span {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.55rem;
+  background: var(--off-white);
+  border: 1px solid rgba(17,17,17,0.15);
+  color: var(--ink);
+}
+.featured-cta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+.featured-more {
+  margin-top: 2rem;
+}
+.featured-more a {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--yellow);
+}
+.featured-more a:hover { color: var(--pink); }
+.hero-role {
+  font-family: var(--bebas);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin: 0 0 0.85rem;
+  max-width: 28ch;
+}
+@media (max-width: 860px) {
+  .featured-section { padding: 3rem 1.25rem; }
+  .featured-card { grid-template-columns: 1fr; gap: 1.25rem; padding: 2rem 0; }
+}
+
 /* ── ANIMATIONS ── */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(16px); }
@@ -712,7 +857,8 @@ footer {
 }
 
 .hero-eyebrow  { animation: slideUp 0.5s 0.05s both; }
-.hero-headline { animation: slideUp 0.6s 0.15s both; }
+.hero-role     { animation: slideUp 0.5s 0.1s both; }
+.hero-headline { animation: slideUp 0.6s 0.18s both; }
 .hero-desc     { animation: slideUp 0.6s 0.3s both; }
 .hero-ctas     { animation: slideUp 0.5s 0.4s both; }
 
@@ -721,10 +867,24 @@ footer {
   nav { padding: 0 1.25rem; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .hero { padding: 2.5rem 1.25rem 0; }
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-stats { flex-direction: row; align-items: flex-start; flex-wrap: wrap; }
-  .hero-ctas { margin: 0 -1.25rem; padding: 2rem 1.25rem; }
+  .hero { padding: 2rem 1.25rem 0; }
+  .hero-inner { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; }
+  .hero-eyebrow { margin-bottom: 1rem; }
+  .hero-headline {
+    font-size: clamp(2.1rem, 8vw, 2.85rem);
+    max-width: none;
+    line-height: 0.98;
+  }
+  .hero-headline .hl-white {
+    -webkit-text-stroke-width: 1.5px;
+  }
+  .hero-role { font-size: 1.15rem; max-width: none; }
+  .hero-desc { margin-top: 1.15rem; font-size: 0.98rem; }
+  .hero-stats { flex-direction: row; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem 1.75rem; }
+  .hero-stat-val { font-size: 2.5rem; text-align: left; }
+  .hero-stat-label { text-align: left; }
+  .hero-ctas { margin: 0 -1.25rem; padding: 1.5rem 1.25rem; }
+  .hero-cta-text { font-size: 1.25rem; }
   .focus-section, .about-section, .caps-section { padding: 3rem 1.25rem; }
   .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-img-frame { aspect-ratio: 4/3; }
@@ -1036,22 +1196,22 @@ footer {
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">Jennifer Simonds-Spellmann</a>
-  <ul class="nav-links">
-    <li><a href="case-studies.html">Case Studies</a></li>
-    <li><a href="workshops.html">Workshops</a></li>
+      <ul class="nav-links">
+    <li><a href="work.html">Work</a></li>
+    <li><a href="approach.html">Approach</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a></li>
-    <li><a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a></li>
+    <li><a href="about.html#contact">Contact</a></li>
+    <li><a href="de/ueber-mich/">Deutsch</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
 </nav>
 <div class="mobile-nav" id="mobileNav">
   <a href="index.html">Home</a>
-  <a href="case-studies.html">Case Studies</a>
-  <a href="workshops.html">Workshops</a>
+  <a href="work.html">Work</a>
+  <a href="approach.html">Approach</a>
   <a href="about.html">About</a>
-  <a href="https://aiadoption.design/" target="_blank" rel="noopener">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
-  <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  <a href="about.html#contact">Contact</a>
+  <a href="de/ueber-mich/">Deutsch</a>
   <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
 </div>
 
@@ -1060,174 +1220,151 @@ footer {
   <div class="hero-inner">
     <div>
       <div class="hero-eyebrow">
-        <span>●</span> Human–AI systems &amp; product design · Berlin
+        <span>●</span> Berlin · English &amp; German
       </div>
+      <p class="hero-role">Human-Centred Design &amp; Strategy Lead</p>
       <h1 class="hero-headline">
-        <span class="sr-only">Designing human + AI systems that deliver.</span>
+        <span class="sr-only">Designing human interaction with complex technology.</span>
         <span aria-hidden="true">
-          Designing<br>
-          <span class="hl-pink">Human + AI</span><br>
-          <span class="hl-white">Systems That</span><br>
-          Deliver.
+          Designing Human <span class="hl-pink">Interaction</span><br>
+          <span class="hl-white">With Complex</span> Technology.
         </span>
       </h1>
       <p class="hero-desc">
-        Product design and research for AI systems, regulated technology and complex digital services, and for the human side of AI adoption: how people understand, trust and work with what AI does. 10+ years designing for real users, including vulnerable groups, to the highest accessibility standards (BITV/WCAG).
+        Leading UX research, AI adoption and product design to create accessible, trustworthy experiences that work for people.
       </p>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
         <div class="hero-stat-val">10+</div>
-        <div class="hero-stat-label">Years leading<br>product design</div>
+        <div class="hero-stat-label">Years of UX &amp;<br>product design</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val">1M+</div>
-        <div class="hero-stat-label">Users on<br>certified products</div>
+        <div class="hero-stat-label">Users on a BITV-certified<br>government app</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-val">14+</div>
-        <div class="hero-stat-label">Public sector AI teams<br>in my Trust by Design research</div>
+        <div class="hero-stat-val">0→6</div>
+        <div class="hero-stat-label">UX team built<br>from scratch</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val">BITV</div>
-        <div class="hero-stat-label">Highest accessibility <br>criteria certified</div>
+        <div class="hero-stat-label">Highest accessibility<br>criteria certified</div>
       </div>
     </div>
   </div>
 
   <div class="hero-ctas">
-    <span class="hero-cta-text">Ready to see the work?</span>
+    <span class="hero-cta-text">See the UX work</span>
     <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="case-studies.html" class="cta-btn cta-btn-primary">View case studies →</a>
-      <a href="workshops.html" class="cta-btn cta-btn-ghost">Workshops →</a>
+      <a href="work.html" class="cta-btn cta-btn-primary">Explore UX Projects →</a>
+      <a href="about.html" class="cta-btn cta-btn-ghost">About Me →</a>
     </div>
-  </div>
-  <div class="hero-site-links">
-    <a href="https://aiadoption.design/" target="_blank" rel="noopener">AI adoption and human–AI systems work → aiadoption.design<span class="sr-only"> (opens in new tab)</span></a>
   </div>
 </section>
 
-<!-- FOCUS AREAS -->
-<section class="focus-section" id="focus-areas">
+<!-- FEATURED UX PROJECTS -->
+<section class="featured-section" id="featured-work" aria-labelledby="featured-title">
   <div class="section-header">
-    <span class="section-label yellow">Focus Areas</span>
-    <span class="section-counter">— 05</span>
+    <span class="section-label" style="color:var(--pink);">Featured UX Projects</span>
+    <span class="section-counter" style="color:rgba(17,17,17,0.35);">— 03</span>
   </div>
-  <div class="focus-grid">
+  <h2 id="featured-title" class="sr-only">Featured UX projects</h2>
+  <p class="featured-intro">Projects where accessibility shaped the design — not as a late checklist, but as product quality balanced with usability, platform conventions and delivery constraints.</p>
+  <div class="featured-list">
 
-    <a href="case-studies.html#equitai" class="focus-card c-pink" aria-label="AI &amp; Innovation Design">
-      <div class="focus-num" aria-hidden="true">01 / 05</div>
-      <h2 class="focus-title">AI &amp; Innovation Design</h2>
-      <span class="focus-arrow" aria-hidden="true">→</span>
+    <a href="case-studies.html#i-kfz" class="featured-card">
+      <figure class="featured-media">
+        <img src="kfz-hero.png" alt="i-Kfz native app screens and BITV accessibility badge collage" width="800" height="600" loading="eager">
+      </figure>
+      <div>
+        <p class="featured-num">01 / Government · Native · Accessibility</p>
+        <h3 class="featured-title">i-Kfz — Digital Vehicle Registration</h3>
+        <p class="featured-problem">Citizens needed a secure way to handle digital driver’s licences and vehicle registration — under legal, authentication and multi-stakeholder constraints, and to BITV accessibility requirements for a public service.</p>
+        <p class="featured-role"><span>My contribution</span>Led UX/UI end-to-end for Germany’s first BITV-certified government app (Android &amp; iOS). Accessibility requirements informed the native design system I owned — component behaviour, contrast, touch targets and interaction patterns — while I built the UX team from zero to six.</p>
+        <div class="featured-skills">
+          <span>Native UX</span><span>BITV / WCAG</span><span>Design systems</span><span>Design leadership</span>
+        </div>
+        <p class="featured-cta">View case study →</p>
+      </div>
     </a>
 
-    <a href="case-studies.html#i-kfz-team" class="focus-card c-cyan" aria-label="Design Leadership &amp; Team Development">
-      <div class="focus-num" aria-hidden="true">02 / 05</div>
-      <h2 class="focus-title">Design Leadership &amp; Team Development</h2>
-      <span class="focus-arrow" aria-hidden="true">→</span>
+    <a href="case-studies.html#eu-digital-drivers-licence" class="featured-card">
+      <figure class="featured-media">
+        <img src="eu-persona.png" alt="Research persona illustrating a disabled driver needing digital ID during a police stop" width="800" height="600" loading="lazy">
+      </figure>
+      <div>
+        <p class="featured-num">02 / Research · Public sector · Inclusive UX</p>
+        <h3 class="featured-title">EU Digital Driving Licence</h3>
+        <p class="featured-problem">Digital ID apps across the EU risk feeling opaque or untrustworthy — especially for older adults, people with disabilities and anyone less familiar with digital services.</p>
+        <p class="featured-role"><span>My contribution</span>Led UX research using journeys, paper prototyping, co-creation and surveys to surface trust, comprehension and access barriers — so inclusive and accessible use could inform design where regulation and real-world use meet.</p>
+        <div class="featured-skills">
+          <span>UX research</span><span>Inclusive design</span><span>Co-creation</span><span>Cross-border</span>
+        </div>
+        <p class="featured-cta">View case study →</p>
+      </div>
     </a>
 
-    <a href="case-studies.html#eu-digital-drivers-licence" class="focus-card c-yellow" aria-label="Research Strategy &amp; Facilitation">
-      <div class="focus-num" aria-hidden="true">03 / 05</div>
-      <h2 class="focus-title">Research Strategy &amp; Facilitation</h2>
-      <span class="focus-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <a href="case-studies.html#i-kfz" class="focus-card c-pink" aria-label="Design Systems, Ops &amp; Accessibility">
-      <div class="focus-num" aria-hidden="true">04 / 05</div>
-      <h2 class="focus-title">Design Systems, Ops &amp; Accessibility</h2>
-      <span class="focus-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <a href="prototyping.html" class="focus-card c-cyan" aria-label="Prototyping &amp; Vibe Coding">
-      <div class="focus-num" aria-hidden="true">05 / 05</div>
-      <h2 class="focus-title">Prototyping &amp; Vibe Coding</h2>
-      <span class="focus-arrow" aria-hidden="true">→</span>
+    <a href="case-studies.html#equitai" class="featured-card">
+      <figure class="featured-media">
+        <img src="equitai-cv-assistant.webp" alt="EquitAI CV editor with the AI Career Assistant explaining edits beside a CV" width="800" height="600" loading="lazy">
+      </figure>
+      <div>
+        <p class="featured-num">03 / Human-centred AI · Inclusion</p>
+        <h3 class="featured-title">EquitAI — Responsible AI for Job Applications</h3>
+        <p class="featured-problem">Recruitment systems under-represent non-standard career paths; AI can add speed but also risk overwriting the applicant’s voice and judgement.</p>
+        <p class="featured-role"><span>My contribution</span>Designed and built an AI agent prototype that starts from barriers faced by migrant and refugee women — defining what AI should automate, augment, or leave in human control so the experience stays usable, fair and human-led.</p>
+        <div class="featured-skills">
+          <span>AI UX</span><span>Research</span><span>Prototyping</span><span>Inclusive design</span>
+        </div>
+        <p class="featured-cta">View case study →</p>
+      </div>
     </a>
 
   </div>
+  <p class="featured-more"><a href="work.html">See all UX projects →</a></p>
 </section>
 
-<!-- RESEARCH AND FRAMEWORKS -->
-<section class="focus-section hub-section" id="research-frameworks">
+<!-- RESEARCH & EXPLORATION (secondary) -->
+<section class="focus-section hub-section" id="research-exploration" aria-labelledby="research-title">
   <div class="section-header">
-    <span class="section-label cyan">Research and Frameworks</span>
-    <span class="section-counter">— 06</span>
+    <span class="section-label cyan">Research &amp; Exploration</span>
+    <span class="section-counter">— Secondary</span>
   </div>
-
-  <a href="https://simondsresearch.com/" target="_blank" rel="noopener" class="hub-featured">
-    <div class="hub-featured-left">
-      <span class="hub-featured-label">The foundation</span>
-      <div class="focus-num" aria-hidden="true">01 / 06</div>
-      <h2 class="hub-featured-title">User Research Portfolio<span class="sr-only">, simondsresearch.com</span></h2>
-    </div>
-    <div class="hub-featured-right">
-      <p class="hub-featured-desc">Studies, methods and insights from 10+ years of research with real users. The research behind all of my work.</p>
-      <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
-    </div>
-  </a>
+  <h2 id="research-title" class="sr-only">Research and exploration</h2>
+  <p style="font-size:1rem;font-weight:300;color:rgba(17,17,17,0.75);max-width:52ch;margin:0 0 2rem;line-height:1.7;">Responsible AI research and related sites that sit alongside my UX practice — useful context, secondary to the project work above.</p>
 
   <div class="focus-grid">
-
-    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="focus-card c-pink">
-      <div class="focus-num" aria-hidden="true">02 / 06</div>
-      <h2 class="focus-title">AI Adoption &amp; Human–AI Systems<span class="sr-only">, aiadoption.design</span></h2>
+    <a href="https://simondsresearch.com/" target="_blank" rel="noopener" class="focus-card c-pink">
+      <div class="focus-num" aria-hidden="true">01</div>
+      <h3 class="focus-title">User research portfolio<span class="sr-only">, simondsresearch.com</span></h3>
       <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
-
-    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="focus-card c-cyan">
-      <div class="focus-num" aria-hidden="true">03 / 06</div>
-      <h2 class="focus-title">EquitAI: AI Agents for Job Applications<span class="sr-only">, EquitAI</span></h2>
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="focus-card c-cyan">
+      <div class="focus-num" aria-hidden="true">02</div>
+      <h3 class="focus-title">AI adoption &amp; human–AI systems<span class="sr-only">, aiadoption.design</span></h3>
       <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
-
     <a href="https://www.trust-by-design.org/" target="_blank" rel="noopener" class="focus-card c-pink">
-      <div class="focus-num" aria-hidden="true">04 / 06</div>
-      <h2 class="focus-title">Frameworks for AI Trust<span class="sr-only">, Trust by Design</span></h2>
+      <div class="focus-num" aria-hidden="true">03</div>
+      <h3 class="focus-title">Trust by Design framework<span class="sr-only">, trust-by-design.org</span></h3>
       <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
-
-    <a href="https://trustbridge.design/" target="_blank" rel="noopener" class="focus-card c-cyan">
-      <div class="focus-num" aria-hidden="true">05 / 06</div>
-      <h2 class="focus-title">Interactions for AI Trust<span class="sr-only">, TrustBridge</span></h2>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="focus-card c-cyan">
+      <div class="focus-num" aria-hidden="true">04</div>
+      <h3 class="focus-title">EquitAI live tool<span class="sr-only">, equitai.eu.com</span></h3>
       <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
-
-    <a href="https://www.trustaudit.tools/" target="_blank" rel="noopener" class="focus-card c-yellow">
-      <div class="focus-num" aria-hidden="true">06 / 06</div>
-      <h2 class="focus-title">Community Workshops for AI Trust<span class="sr-only">, TrustAudit Tools</span></h2>
+    <a href="https://trustbridge.design/" target="_blank" rel="noopener" class="focus-card c-yellow">
+      <div class="focus-num" aria-hidden="true">05</div>
+      <h3 class="focus-title">TrustBridge interactions<span class="sr-only">, trustbridge.design</span></h3>
       <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
     </a>
-
-  </div>
-</section>
-
-<!-- ACCESSIBILITY HIGHLIGHT -->
-<section class="accessibility-highlight" style="background:var(--cyan);padding:3.5rem 2.5rem;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);">
-  <div class="accessibility-highlight-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
-    <div>
-      <p style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(17,17,17,0.5);margin-bottom:1rem;">Accessibility & Inclusion</p>
-      <h2 style="font-family:var(--bebas);font-weight:400;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:0.03em;color:var(--ink);line-height:1;margin-bottom:1.5rem;">Designing for everyone.<br>Not just the average user.</h2>
-      <p style="font-size:1rem;font-weight:300;color:rgba(17,17,17,0.7);line-height:1.8;max-width:46ch;">I design products that work for the full spectrum of users — including elderly, disabled, cognitively impaired, and digitally excluded populations. Certified to the <strong style="color:var(--ink);font-weight:500;">highest BITV criteria</strong> — Germany's most stringent accessibility standard — and experienced applying WCAG 2.1 AA/AAA across native Android, iOS, and web.</p>
-    </div>
-    <div class="accessibility-highlight-cards" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-      <div style="background:var(--ink);padding:1.5rem;">
-        <p style="font-family:var(--bebas);font-weight:400;font-size:2rem;letter-spacing:0.04em;color:var(--yellow);margin-bottom:0.5rem;">BITV</p>
-        <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Highest accessibility criteria certified — Germany's national standard</p>
-      </div>
-      <div style="background:var(--ink);padding:1.5rem;">
-        <p style="font-family:var(--bebas);font-weight:400;font-size:2rem;letter-spacing:0.04em;color:var(--pink);margin-bottom:0.5rem;">WCAG</p>
-        <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">2.1 AA/AAA across web, iOS & Android</p>
-      </div>
-      <div style="background:var(--ink);padding:1.5rem;">
-        <p style="font-family:var(--bebas);font-weight:400;font-size:2rem;letter-spacing:0.04em;color:var(--cyan);margin-bottom:0.5rem;">1M+</p>
-        <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Users on fully accessible certified government app</p>
-      </div>
-      <div style="background:var(--ink);padding:1.5rem;">
-        <p style="font-family:var(--bebas);font-weight:400;font-size:2rem;letter-spacing:0.04em;color:var(--yellow);margin-bottom:0.5rem;">#1</p>
-        <p style="font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);">First BITV-certified government app in Germany</p>
-      </div>
-    </div>
+    <a href="https://www.trustaudit.tools/" target="_blank" rel="noopener" class="focus-card c-pink">
+      <div class="focus-num" aria-hidden="true">06</div>
+      <h3 class="focus-title">TrustAudit Tools<span class="sr-only">, trustaudit.tools</span></h3>
+      <p class="hub-ext">Opens in new tab <span class="hub-ext-arrow" aria-hidden="true">↗</span></p>
+    </a>
   </div>
 </section>
 
@@ -1246,30 +1383,29 @@ footer {
       </div>
     </div>
     <div>
-      <h2 class="about-name">Senior UX &amp; AI Designer.<br>Berlin-based. Dual citizen.</h2>
+      <h2 class="about-name">Senior UX Designer &amp; UX Strategist.<br>Berlin-based. Dual citizen.</h2>
       <p class="about-body">
-        I lead product design for <strong>complex, high-stakes systems</strong> — defining UX vision and strategy, growing design teams, and shipping products that work for the people who depend on them most.
+        I work beyond interface design into <strong>research, problem framing, stakeholder alignment, accessibility, design systems and strategic decision-making</strong> — helping organisations ship products people can use, understand and trust.
       </p>
       <p class="about-body">
-        10+ years across AI product design, government digital services, and regulated technology. Most recently Senior UX/AI Design Specialist at Bundesdruckerei — <strong>built a UX team from zero to six</strong>, delivered Germany's first BITV-certified government app with 1M+ downloads, and led design ops, design systems, and research strategy across the organisation.
+        Accessibility is a core design capability in that work: I treat BITV, WCAG and platform guidelines as inputs to interaction design — balancing them with usability, technical feasibility and user needs — not as a separate compliance exercise.
       </p>
       <p class="about-body">
-        Equally comfortable with <strong>speculative innovation and future-focused concepts</strong> as with the rigour of shipping production-ready products through agile delivery. I design for the full spectrum of users — including elderly, disabled, and cognitively impaired populations — and hold certification to the <strong>highest BITV criteria</strong>. MA in Design for Responsible AI. Fluent in English and German (C2).
+        More than 10 years across government digital services and regulated technology. Most recently Senior UX/AI Design Specialist at Bundesdruckerei — <strong>built a UX team from zero to six</strong>, delivered Germany's first BITV-certified government app with 1M+ downloads, and led design ops, design systems and research strategy.
+      </p>
+      <p class="about-body">
+        MA in Design for Responsible AI. Fluent in English and German. Available for senior UX, lead UX and UX strategy roles — and selected consulting.
       </p>
 
       <div class="about-pills">
-        <span class="pill p-ink">AI Product Design</span>
-        <span class="pill p-pink">Speculative Design</span>
-        <span class="pill p-cyan">Design Systems</span>
-        <span class="pill p-white">Design Ops</span>
-        <span class="pill p-ink">Design Leadership</span>
-        <span class="pill p-pink">Research Strategy</span>
-        <span class="pill p-cyan">Lean UX & Agile</span>
-        <span class="pill p-white">Workshop Facilitation</span>
-        <span class="pill p-ink">BITV / WCAG</span>
-        <span class="pill p-pink">Prototyping</span>
-        <span class="pill p-cyan">Participatory Design</span>
-        <span class="pill p-white">Visual Design</span>
+        <span class="pill p-ink">UX strategy</span>
+        <span class="pill p-pink">User research</span>
+        <span class="pill p-cyan">Design systems</span>
+        <span class="pill p-white">Accessible UX (BITV / WCAG)</span>
+        <span class="pill p-ink">Native iOS &amp; Android</span>
+        <span class="pill p-pink">Workshops</span>
+        <span class="pill p-cyan">Human-centred AI</span>
+        <span class="pill p-white">Cross-functional leadership</span>
       </div>
 
       <div class="about-langs">
@@ -1279,40 +1415,19 @@ footer {
       </div>
 
       <div class="about-links">
-        <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="cta-btn cta-btn-primary" style="background:var(--ink);color:var(--yellow);">Connect on LinkedIn →<span class="sr-only"> (opens in new tab)</span></a>
+        <a href="about.html" class="cta-btn cta-btn-primary" style="background:var(--ink);color:var(--yellow);">About Me →</a>
+        <a href="about.html#contact" class="cta-btn cta-btn-ghost" style="border-color:var(--ink);color:var(--ink);">Contact →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CAPABILITIES GRID -->
-<section class="caps-section">
-  <div class="section-header">
-    <span class="section-label" style="color:var(--ink);">Capabilities</span>
-    <span class="section-counter" style="color:rgba(17,17,17,0.35);">— 12</span>
-  </div>
-  <div class="caps-grid">
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">AI Product Design</span></a>
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Speculative & Innovation Design</span></a>
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">UX Vision & Strategy</span></a>
-    <a href="workshops.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Research Strategy & Testing</span></a>
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Systems & Governance</span></a>
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Ops & Process</span></a>
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Design Leadership & Coaching</span></a>
-    <a href="workshops.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Workshop Facilitation</span></a>
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Concept & Prototyping</span></a>
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Lean UX & Agile</span></a>
-    <a href="case-studies.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Accessibility (BITV/WCAG)</span></a>
-    <a href="about.html" class="cap-item"><span class="cap-dot"></span><span class="cap-name">Cross-functional Collaboration</span></a>
-  </div>
-</section>
-
 <!-- WORK CTA -->
 <section class="work-strip stripe">
-  <h2 class="work-headline">10+ years of work.<br><span>Let's look at it.</span></h2>
+  <h2 class="work-headline">UX projects with<br><span>accessible decisions.</span></h2>
   <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-    <a href="case-studies.html" class="cta-btn cta-btn-primary">Case studies →</a>
-    <a href="about.html" class="cta-btn" style="background:var(--white);color:var(--ink);">About me →</a>
+    <a href="work.html" class="cta-btn cta-btn-primary">Explore UX Projects →</a>
+    <a href="approach.html" class="cta-btn" style="background:var(--white);color:var(--ink);">How I work →</a>
   </div>
 </section>
 
@@ -1321,6 +1436,7 @@ footer {
   <a href="/" class="footer-logo">Jennifer Simonds-Spellmann</a>
   <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
   <span style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+    <a href="de/ueber-mich/" class="footer-link">Deutsch</a>
     <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="footer-link">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
     <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="footer-link">EquitAI ↗<span class="sr-only"> (opens in new tab)</span></a>
     <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>

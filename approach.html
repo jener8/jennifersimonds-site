@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="/favron32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favron16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Approach — Jennifer Simonds-Spellmann</title>
+<meta name="description" content="How Jennifer Simonds-Spellmann approaches UX: research, problem framing, stakeholder alignment, accessibility, design systems and strategic decision-making.">
+<meta property="og:title" content="Approach — Jennifer Simonds-Spellmann">
+<meta property="og:description" content="UX beyond the interface: research, problem framing, accessibility, design systems and strategic decisions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jennifersimonds.com/approach">
+<link rel="canonical" href="https://jennifersimonds.com/approach">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --yellow: #FFD93D; --pink: #FF3DA0; --pink-dark: #CC1F7A;
+  --cyan: #00C4D4; --ink: #111111; --white: #FFFFFF; --off-white: #FAFAF7;
+  --stripe-color: rgba(0,0,0,0.055);
+  --bebas: 'Bebas Neue', Impact, sans-serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --mono: 'Space Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--off-white); color: var(--ink); font-family: var(--body); font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.stripe { background-image: repeating-linear-gradient(-45deg, var(--stripe-color) 0px, var(--stripe-color) 2px, transparent 2px, transparent 12px); }
+nav { position: sticky; top: 0; z-index: 100; background: var(--ink); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 60px; }
+.nav-logo { font-family: var(--bebas); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.06em; color: var(--yellow); text-decoration: none; }
+.nav-links { display: flex; list-style: none; }
+.nav-links a { display: block; padding: 0 1.25rem; height: 60px; line-height: 60px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.80); text-decoration: none; transition: color 0.15s; border-left: 0.5px solid rgba(255,255,255,0.08); }
+.nav-links a:hover, .nav-links a.active { color: var(--yellow); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--bebas); font-weight: 400; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--yellow); text-decoration: none; }
+.footer-copy { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.75); text-transform: uppercase; }
+.footer-link { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); text-decoration: none; }
+.footer-link:hover { color: var(--yellow); }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.8rem; font-family: var(--mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.15s; }
+.btn-ink { background: var(--ink); color: var(--yellow); }
+.btn-ink:hover { background: #333; }
+.page-hero { background: var(--yellow); padding: 3rem 2.5rem 3.5rem; border-bottom: 3px solid var(--ink); }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(17,17,17,0.75); text-decoration: none; margin-bottom: 2rem; }
+.back-link:hover { color: var(--ink); }
+.page-eyebrow { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.80); margin-bottom: 1rem; }
+.page-title { font-family: var(--bebas); font-weight: 400; font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: 0.02em; line-height: 0.92; color: var(--ink); }
+.page-title .ac-pink { color: var(--pink); }
+.page-subtitle { margin-top: 1.5rem; max-width: 48rem; font-size: 1rem; font-weight: 300; line-height: 1.75; color: rgba(17,17,17,0.85); }
+.pillars { background: var(--ink); padding: 4rem 2.5rem; }
+.pillars h2 { font-family: var(--bebas); font-weight: 400; font-size: 2.2rem; letter-spacing: 0.04em; color: var(--yellow); margin-bottom: 2rem; }
+.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1.5px solid rgba(255,255,255,0.15); list-style: none; }
+.pillars-grid li { padding: 1.75rem 1.5rem; border-right: 1.5px solid rgba(255,255,255,0.1); border-bottom: 1.5px solid rgba(255,255,255,0.1); }
+.pillars-grid li:nth-child(3n) { border-right: none; }
+.pillars-grid li:nth-last-child(-n+3) { border-bottom: none; }
+.pillars-grid h3 { font-family: var(--bebas); font-weight: 400; font-size: 1.4rem; letter-spacing: 0.03em; color: var(--white); margin-bottom: 0.65rem; }
+.pillars-grid p { font-size: 0.9rem; font-weight: 300; color: rgba(255,255,255,0.78); line-height: 1.7; margin: 0; }
+.related { padding: 4rem 2.5rem; background: var(--white); border-bottom: 1.5px solid rgba(17,17,17,0.08); }
+.related h2 { font-family: var(--bebas); font-weight: 400; font-size: 2.2rem; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 1rem; }
+.related p { font-size: 1rem; font-weight: 300; color: rgba(17,17,17,0.75); max-width: 52ch; line-height: 1.75; margin-bottom: 1.5rem; }
+.related-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+.related-links a { font-family: var(--mono); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--ink); border: 1.5px solid var(--ink); padding: 0.75rem 1.25rem; }
+.related-links a:hover { background: var(--yellow); }
+.cta-strip { background: var(--pink); padding: 3.5rem 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; border-top: 3px solid var(--ink); }
+.cta-text { font-family: var(--bebas); font-weight: 400; font-size: clamp(2rem, 4vw, 3.5rem); color: var(--white); letter-spacing: 0.03em; line-height: 1; }
+.cta-text span { color: var(--yellow); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 200; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--yellow); }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav { display: none; position: fixed; top: 60px; left: 0; right: 0; bottom: 0; background: var(--ink); z-index: 99; flex-direction: column; padding: 2.5rem; overflow-y: auto; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.80); text-decoration: none; padding: 1rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+.mobile-nav a:hover { color: var(--yellow); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 860px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-hero, .pillars, .related, .cta-strip { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .pillars-grid li { border-right: none; }
+  .pillars-grid li:nth-last-child(-n+3) { border-bottom: 1.5px solid rgba(255,255,255,0.1); }
+  .pillars-grid li:last-child { border-bottom: none; }
+  footer { padding: 1.5rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Jennifer Simonds-Spellmann</a>
+  <ul class="nav-links">
+    <li><a href="work.html">Work</a></li>
+    <li><a href="approach.html" class="active">Approach</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="about.html#contact">Contact</a></li>
+    <li><a href="de/ueber-mich/">Deutsch</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="approach.html">Approach</a>
+  <a href="about.html">About</a>
+  <a href="about.html#contact">Contact</a>
+  <a href="de/ueber-mich/">Deutsch</a>
+  <a href="imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
+</div>
+
+<section class="page-hero stripe">
+  <a href="index.html" class="back-link">← Back to home</a>
+  <p class="page-eyebrow">How I work</p>
+  <h1 class="page-title">UX beyond<br><span class="ac-pink">the interface.</span></h1>
+  <p class="page-subtitle">My UX work extends beyond screens into research, problem framing, stakeholder alignment, accessibility, design systems and strategic decision-making — especially in complex, regulated and public-sector environments.</p>
+</section>
+
+<section class="pillars" aria-labelledby="pillars-title">
+  <h2 id="pillars-title">What that looks like in practice</h2>
+  <ul class="pillars-grid">
+    <li>
+      <h3>Research &amp; discovery</h3>
+      <p>Identify who is affected, what they need to understand, and where trust breaks — through interviews, usability testing, journeys and co-creation.</p>
+    </li>
+    <li>
+      <h3>Problem framing</h3>
+      <p>Separate the user problem from the solution space before committing to flows, components or AI features.</p>
+    </li>
+    <li>
+      <h3>Stakeholder alignment</h3>
+      <p>Facilitate workshops and decision forums so product, legal, engineering and policy can move with a shared understanding of risk and value.</p>
+    </li>
+    <li>
+      <h3>Accessibility</h3>
+      <p>Treat BITV, WCAG and platform guidelines as design inputs — shaping navigation, components, typography, contrast and interaction patterns — balanced with usability and technical feasibility, not as a late compliance checklist.</p>
+    </li>
+    <li>
+      <h3>Design systems</h3>
+      <p>Build and govern component libraries so complex products stay coherent as teams and platforms scale.</p>
+    </li>
+    <li>
+      <h3>Strategic decisions</h3>
+      <p>Balance user needs with technical, regulatory and organisational constraints — and make the trade-offs visible.</p>
+    </li>
+  </ul>
+</section>
+
+<section class="related" id="workshops">
+  <h2>Related methods</h2>
+  <p>Workshops and hands-on prototyping support this approach. They remain available here; they are no longer competing top-level destinations.</p>
+  <div class="related-links">
+    <a href="workshops.html">Workshops →</a>
+    <a href="prototyping.html">Prototyping →</a>
+    <a href="work.html">UX projects →</a>
+  </div>
+</section>
+
+<section class="cta-strip stripe">
+  <h2 class="cta-text">See how this<br><span>shows up in projects.</span></h2>
+  <a href="work.html" class="btn btn-ink">Explore UX Projects →</a>
+</section>
+
+<footer>
+  <a href="index.html" class="footer-logo">Jennifer Simonds-Spellmann</a>
+  <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
+  <span style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+    <a href="de/ueber-mich/" class="footer-link">Deutsch</a>
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="footer-link">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="footer-link">EquitAI ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  </span>
+</footer>
+
+<script>
+const h = document.getElementById("hamburger");
+const m = document.getElementById("mobileNav");
+if (h && m) {
+  const closeMenu = () => { h.classList.remove("open"); m.classList.remove("open"); h.setAttribute("aria-expanded", "false"); };
+  const toggleMenu = () => { const isOpen = h.classList.toggle("open"); m.classList.toggle("open", isOpen); h.setAttribute("aria-expanded", String(isOpen)); };
+  h.addEventListener("click", toggleMenu);
+  m.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+  window.addEventListener("resize", () => { if (window.innerWidth > 860) closeMenu(); });
+  window.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
+}
+</script>
+</body>
+</html>

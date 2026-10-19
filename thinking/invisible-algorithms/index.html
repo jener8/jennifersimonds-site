@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="/favron32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favron16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What museums and archives can learn from children about invisible algorithms</title>
+<meta name="description" content="What a school project on invisible algorithms suggests about AI in cultural institutions.">
+<meta property="og:title" content="What museums and archives can learn from children about invisible algorithms">
+<meta property="og:description" content="What a school project on invisible algorithms suggests about AI in cultural institutions.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jennifersimonds.com/thinking/invisible-algorithms">
+<link rel="canonical" href="https://jennifersimonds.com/thinking/invisible-algorithms">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --yellow: #FFD93D; --pink: #FF3DA0; --pink-dark: #CC1F7A;
+  --cyan: #00C4D4; --ink: #111111; --white: #FFFFFF; --off-white: #FAFAF7;
+  --stripe-color: rgba(0,0,0,0.055);
+  --bebas: 'Bebas Neue', Impact, sans-serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+  --mono: 'Space Mono', monospace;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--off-white); color: var(--ink); font-family: var(--body); font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.stripe { background-image: repeating-linear-gradient(-45deg, var(--stripe-color) 0px, var(--stripe-color) 2px, transparent 2px, transparent 12px); }
+nav { position: sticky; top: 0; z-index: 100; background: var(--ink); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 60px; }
+.nav-logo { font-family: var(--bebas); font-weight: 400; font-size: 1.25rem; letter-spacing: 0.06em; color: var(--yellow); text-decoration: none; }
+.nav-links { display: flex; list-style: none; }
+.nav-links a { display: block; padding: 0 1.25rem; height: 60px; line-height: 60px; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.80); text-decoration: none; transition: color 0.15s; border-left: 0.5px solid rgba(255,255,255,0.08); }
+.nav-links a:hover, .nav-links a.active { color: var(--yellow); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+footer { background: var(--ink); padding: 2rem 2.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-family: var(--bebas); font-weight: 400; font-size: 1.15rem; letter-spacing: 0.06em; color: var(--yellow); text-decoration: none; }
+.footer-copy { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.75); text-transform: uppercase; }
+.footer-link { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); text-decoration: none; }
+.footer-link:hover { color: var(--yellow); }
+.page-hero { background: var(--yellow); padding: 3rem 2.5rem 3.5rem; border-bottom: 3px solid var(--ink); }
+.back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(17,17,17,0.75); text-decoration: none; margin-bottom: 2rem; }
+.back-link:hover { color: var(--ink); }
+.page-eyebrow { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(17,17,17,0.80); margin-bottom: 1rem; }
+.page-title { font-family: var(--bebas); font-weight: 400; font-size: clamp(2.5rem, 5.5vw, 4.75rem); letter-spacing: 0.02em; line-height: 0.95; color: var(--ink); max-width: 20ch; }
+.content { padding: 4rem 2.5rem 5rem; background: var(--white); }
+.content-inner { max-width: 42rem; }
+.content p { font-size: 1.05rem; font-weight: 300; color: rgba(17,17,17,0.78); line-height: 1.85; margin-bottom: 1.35rem; max-width: 58ch; }
+.content a { color: var(--pink-dark); }
+.end-links { margin-top: 3rem; padding-top: 2rem; border-top: 1.5px solid rgba(17,17,17,0.12); display: flex; flex-direction: column; gap: 0.85rem; }
+.end-links a { font-family: var(--mono); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--ink); }
+.end-links a:hover { color: var(--pink); }
+.placeholder { display: inline; background: var(--yellow); color: var(--ink); padding: 0.1em 0.35em; font-family: var(--mono); font-size: 0.9em; font-weight: 700; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; z-index: 200; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--yellow); }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-nav { display: none; position: fixed; top: 60px; left: 0; right: 0; bottom: 0; background: var(--ink); z-index: 99; flex-direction: column; padding: 2.5rem; overflow-y: auto; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-family: var(--bebas); font-weight: 400; font-size: 2.5rem; letter-spacing: 0.04em; color: rgba(255,255,255,0.80); text-decoration: none; padding: 1rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+.mobile-nav a:hover { color: var(--yellow); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 860px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-hero, .content { padding-left: 1.25rem; padding-right: 1.25rem; }
+  footer { padding: 1.5rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../../index.html" class="nav-logo">Jennifer Simonds-Spellmann</a>
+    <ul class="nav-links">
+    <li><a href="../../work.html">Work</a></li>
+    <li><a href="../../approach.html">Approach</a></li>
+    <li><a href="../../about.html">About</a></li>
+    <li><a href="../../about.html#contact">Contact</a></li>
+    <li><a href="../../de/ueber-mich/">Deutsch</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="../../index.html">Home</a>
+  <a href="../../work.html">Work</a>
+  <a href="../../approach.html">Approach</a>
+  <a href="../../about.html">About</a>
+  <a href="../../about.html#contact">Contact</a>
+  <a href="../../de/ueber-mich/">Deutsch</a>
+  <a href="../../imprint.html" style="font-size:1.2rem;color:rgba(255,255,255,0.25);">Impressum</a>
+</div>
+
+<section class="page-hero stripe">
+  <a href="../" class="back-link">← Back to Thinking</a>
+  <p class="page-eyebrow">Thinking — Essay</p>
+  <h1 class="page-title">What museums and archives can learn from children about invisible algorithms</h1>
+</section>
+
+<article class="content">
+  <div class="content-inner">
+    <p>In Seeing the Algorithm, a project with Freie Schule Pankow, children explore systems that shape what they see without ever showing themselves. <span class="placeholder">[One observation from the children]</span></p>
+    <p>Cultural institutions face the same question as they bring AI into cataloguing, search and research: when a system decides what surfaces from a collection, who can see that choice, and who can challenge it?</p>
+    <p><span class="placeholder">[2–3 sentences: what this means for museums, libraries and archives]</span></p>
+    <div class="end-links">
+      <a href="../../work/trust-by-design/">See the Trust by Design case study →</a>
+      <a href="../../case-studies.html#seeing-the-algorithm">Seeing the Algorithm case study →</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <a href="../../index.html" class="footer-logo">Jennifer Simonds-Spellmann</a>
+  <span class="footer-copy">Product Design Innovation · Berlin · © 2026 · <a href="../../imprint.html" style="color:rgba(255,255,255,0.3);text-decoration:none;">Impressum</a></span>
+  <span style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
+    <a href="../../de/ueber-mich/" class="footer-link">Deutsch</a>
+    <a href="https://aiadoption.design/" target="_blank" rel="noopener" class="footer-link">AI Adoption ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://equitai.eu.com/" target="_blank" rel="noopener" class="footer-link">EquitAI ↗<span class="sr-only"> (opens in new tab)</span></a>
+    <a href="https://www.linkedin.com/in/simondsjennifer/" target="_blank" rel="noopener" class="footer-link">LinkedIn ↗<span class="sr-only"> (opens in new tab)</span></a>
+  </span>
+</footer>
+
+<script>
+const h = document.getElementById("hamburger");
+const m = document.getElementById("mobileNav");
+if (h && m) {
+  const closeMenu = () => { h.classList.remove("open"); m.classList.remove("open"); h.setAttribute("aria-expanded", "false"); };
+  const toggleMenu = () => { const isOpen = h.classList.toggle("open"); m.classList.toggle("open", isOpen); h.setAttribute("aria-expanded", String(isOpen)); };
+  h.addEventListener("click", toggleMenu);
+  m.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+  window.addEventListener("resize", () => { if (window.innerWidth > 860) closeMenu(); });
+  window.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
+}
+</script>
+</body>
+</html>
